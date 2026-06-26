@@ -36,16 +36,16 @@ educational tutoring, formal debate assistance, or error‑checking of argumenta
 
 ## Install
 
-This skill is packaged as a plugin for **Claude Code**, **Cursor**, and **OpenAI Codex**, and also installs as a plain **skill folder** (Kimi Code CLI and others).
+This skill is distributed through the **rpa-skills** catalog (a Claude Code plugin marketplace), and also installs as a plain **skill folder** (Cursor, OpenAI Codex, Kimi Code CLI, and others).
 
-**As a plugin (Claude Code):**
+**As a plugin (Claude Code)** — add the catalog once, then install this skill from it:
 
 ```text
-/plugin marketplace add EvilFreelancer/logika
-/plugin install logika@logika
+/plugin marketplace add EvilFreelancer/rpa-skills
+/plugin install logika@rpa-skills
 ```
 
-**As a plain skill folder** — copy or symlink `skills/logika/` into a skill root:
+**As a plain skill folder** — copy or symlink this repository into a skill root (its `SKILL.md` lives at the repo root):
 
 | Tool          | Path                          |
 |---------------|-------------------------------|
