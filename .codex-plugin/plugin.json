@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Classical formal logic from G. Chelpanov's textbook: concepts, judgments, syllogisms, induction, fallacies, laws of thought. Rule-based reasoning and argument validation, not heuristic pattern matching.",
   "author": {
-    "name": "Pavel Zloi",
+    "name": "Pavel Rykov",
     "email": "paul@drteam.rocks",
     "url": "https://t.me/evilfreelancer"
   },
@@ -23,7 +23,7 @@
   "interface": {
     "displayName": "logika",
     "shortDescription": "Classical formal logic — syllogisms, induction, fallacies, laws of thought.",
-    "developerName": "Pavel Zloi",
+    "developerName": "Pavel Rykov",
     "category": "Education",
     "websiteURL": "https://github.com/EvilFreelancer/logika"
   }
