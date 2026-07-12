@@ -1,7 +1,7 @@
 {
   "name": "logika",
-  "description": "Classical formal logic from G. Chelpanov's textbook: concepts, judgments, syllogisms, induction, fallacies, laws of thought. Rule-based reasoning and argument validation, not heuristic pattern matching.",
-  "version": "1.0.0",
+  "description": "Classical formal logic from G. Chelpanov's textbook: concepts, judgments, syllogisms, induction, fallacies, laws of thought. Two text modes — logical review (logika:review, analysis-only report) and argument fixing (rewrite with corrected logic) — plus solving logic textbook problems. Russian-language references distilled from the source book.",
+  "version": "2.0.0",
   "author": {
     "name": "Pavel Rykov",
     "email": "paul@drteam.rocks"

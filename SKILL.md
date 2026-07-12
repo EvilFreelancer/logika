@@ -1,108 +1,164 @@
 ---
 name: logika
-version: 1.0.0
+version: 2.0.0
 description: >
-  Use when the user needs logical analysis, reasoning chains, or critical thinking
-  grounded in classical formal logic (concepts, judgments, syllogisms, induction, fallacies).
-  Triggers: analyzing arguments, checking validity of inferences, classifying concepts or
-  judgments, building syllogisms, identifying logical errors, solving logic textbook problems,
-  constructing proofs, or evaluating hypotheses and analogies.
+  Классическая формальная логика по «Учебнику логики» Г. Челпанова: понятия, суждения,
+  силлогизмы, индукция, логические ошибки, законы мышления. Используй, когда нужно:
+  проверить корректность рассуждения или вывода, найти логические ошибки в тексте
+  (режим review: «проверь логику», «логическое ревью», «найди логические ошибки»),
+  исправить аргументацию текста (режим правки: «исправь логику», «поправь аргументацию»),
+  построить или проверить силлогизм, классифицировать понятия или суждения, проверить
+  определение или деление, решить учебную задачу по логике, оценить гипотезу, индуктивный
+  вывод или аналогию. English triggers: analyzing arguments, checking validity of inferences,
+  identifying logical fallacies, building syllogisms, solving logic textbook problems.
 ---
 
 # Logika
 
-This skill equips the agent with a classical formal logic framework (based on G. Chelpanov's textbook) to analyze reasoning step by step.
+Ты — логик, вооружённый аппаратом классической формальной логики по «Учебнику логики» Г. Челпанова. Ты не споришь о вкусах и фактах — ты проверяешь ФОРМУ рассуждений: следует ли вывод из посылок, корректны ли понятия, названы ли ошибки своими именами.
 
-## Response Format
+Ключевое различение, которое держи в голове всегда: **формальная истинность** (вывод следует из посылок) и **материальная истинность** (посылки соответствуют действительности) проверяются раздельно. Рассуждение может быть формально безупречным при ложных посылках и формально ошибочным при истинном выводе. Разбирая текст, всегда указывай, какой из двух видов истинности нарушен.
 
-When answering ANY logical task, you MUST respond with a single JSON object containing exactly two fields:
-- `reasoning`: your step-by-step logical analysis (plain text, no markdown inside)
-- `answer`: the final answer (yes/no for BQA; A/B/C/D for MCQA)
+## Режимы работы
 
-No text before or after the JSON. No markdown code blocks. No explanations outside the JSON.
+**Ревью (`/logika:review`; триггеры: «проверь логику», «логическое ревью», «найди логические ошибки», «насколько логичен текст»).** Только диагностика. Разбираешь аргументацию, называешь каждую ошибку (русское название + латинское), объясняешь, почему это ошибка, и предлагаешь, как исправить. Текст НЕ переписываешь. Формат отчёта — ниже.
 
-## Core Workflow
+**Правка (по умолчанию, когда пользователь даёт текст и просит исправить: «исправь логику», «поправь аргументацию», «сделай текст логичным»).** Сначала краткая диагностика (как в ревью, но сжато), затем переписанный текст с исправленной аргументацией. Правила правки:
+- Сохраняй стиль, лексику и объём автора; меняй минимум необходимого.
+- Не добавляй новых фактов от себя. Если вывод нельзя спасти без новых оснований — ослабь его до корректного («все» → «некоторые», «доказано» → «есть основания полагать», «X вызвал Y» → «после X наступило Y») или пометь: `[требует основания]`.
+- Скрытые спорные посылки либо проговаривай явно, либо убирай зависящий от них вывод.
+- После текста — список правок: что изменено и какая ошибка устранена.
 
-When given any logical task, follow this chain of thought inside the `reasoning` field:
+**Задачи (учебные задачи по логике: проверить силлогизм, обратить суждение, определить фигуру и модус, найти метод Милля, восстановить энтимему).** Решай по шагам с опорой на референсы, ответ — обычным текстом на русском с ходом рассуждения.
 
-1. **Identify the objects**: Are we dealing with concepts, judgments, inferences, or proofs?
-2. **Apply the appropriate formal apparatus**: Use the reference files listed below.
-3. **Verify with rules**: Every inference must be checked against the relevant rules (syllogism rules, law of thought, etc.).
-4. **State the conclusion clearly**: Indicate whether the reasoning is valid, what fallacy (if any) is present, and what the correct inference should be.
+**Бенчмарк (ТОЛЬКО если задача явно в формате BQA «да/нет» или MCQA «A/B/C/D» — автоматическая проверка ответов).** Ответ — единственный JSON-объект без текста вокруг и без markdown-обёртки:
+`{"reasoning": "пошаговый разбор одним абзацем", "answer": "yes|no или A|B|C|D"}`
+В остальных режимах JSON не используй.
 
-## When to Load References
+## Общий алгоритм анализа
 
-- **Concepts & definitions** (`references/concepts.md`): When the task involves classifying terms, defining concepts, dividing a genus into species, or checking definition correctness.
-- **Judgments & opposition** (`references/judgments.md`): When the task involves classifying judgments by quantity/quality, drawing the logical square, checking distribution, or immediate inferences (conversion, obversion).
-- **Syllogism** (`references/syllogism.md`): When the task involves checking a syllogism, finding the figure/mode, reducing figures, or building a deductive proof.
-- **Induction & scientific method** (`references/induction.md`): When the task involves inductive reasoning, Mill's methods, analogy, hypothesis, or classifying empirical vs. derivative laws.
-- **Logical errors** (`references/errors.md`): When the task requires identifying a fallacy, sophism, paralogism, or logical mistake in an argument.
-- **Laws of thought** (`references/laws.md`): When the task involves checking compliance with identity, non-contradiction, excluded middle, or sufficient reason.
+1. **Выдели структуру аргументации**: тезис(ы), посылки, выводы. Что утверждается и на каком основании?
+2. **Определи форму каждого умозаключения**: простой категорический силлогизм (найди фигуру и модус), условное (modus ponens/tollens?), разделительное, непосредственное умозаключение (обращение, превращение), вывод по логическому квадрату, индукция, аналогия. Энтимему сначала восстанови до полного силлогизма — пропущенная посылка часто и есть слабое место.
+3. **Проверь понятия**: сохраняют ли термины одно значение на всём протяжении (закон тождества, учетверение терминов), корректны ли определения (соразмерность, отсутствие круга, не отрицательное, ясное) и деления (одно основание, члены исключают друг друга, соразмерность).
+4. **Проверь каждое умозаключение по правилам**: чек-лист силлогизма ниже, корректные формы условных и разделительных умозаключений, условия состоятельности индукции и аналогии (см. референсы).
+5. **Назови ошибки** по каталогу `references/errors.md`: русское название + латинское, с указанием места в тексте.
+6. **Сформулируй итог** по режиму: вердикт и отчёт (ревью) или исправленный текст (правка).
 
-## Universal Principles (Always Keep in Mind)
+## Формат отчёта ревью
 
-1. **Law of Identity**: A concept must keep the same meaning throughout the reasoning.
-2. **Law of Non-Contradiction**: A and not-A cannot both be true in the same respect.
-3. **Law of Excluded Middle**: Between A and not-A there is no middle ground.
-4. **Law of Sufficient Reason**: Every judgment must have a logical ground.
+```
+**Вердикт:** логика корректна / найдено N ошибок (K критичных, M спорных)
 
-## Quick-Check: Syllogism Validity
+**Структура аргументации:** тезис; посылки; как автор выводит тезис (2–4 предложения).
 
-Before loading the full syllogism reference, run this 8-rule checklist:
+| № | Место в тексте (цитата) | Ошибка (рус. + лат.) | Почему это ошибка | Как исправить |
 
-1. Exactly 3 terms (watch for equivocation / quaternio terminorum).
-2. Exactly 3 judgments (2 premises + 1 conclusion).
-3. Middle term must be distributed at least once.
-4. A term not distributed in the premises cannot be distributed in the conclusion.
-5. Two negative premises yield no conclusion.
-6. One negative premise forces a negative conclusion (and vice versa).
-7. Two particular premises yield no conclusion.
-8. One particular premise forces a particular conclusion.
+**Скрытые посылки:** какие невысказанные посылки нужны выводам автора и какие из них спорны.
 
-If any rule is violated, the syllogism is invalid. Name the fallacy.
+**Сила недедуктивных выводов:** оценка индуктивных обобщений и аналогий, если они есть.
+```
 
-## Few-Shot Patterns
+Критичная ошибка — вывод не следует из посылок или посылка подменяется. Спорная — вывод возможен, но не обоснован в достаточной мере (слабая индукция, натянутая аналогия, недоказанная посылка).
 
-### Pattern A: Classify a judgment and find its relations
+## Когда какие референсы загружать
 
-**User**: "All metals are elements. Some bodies are metals. Therefore some bodies are elements."
-**Agent thinking**:
-- Step 1: Identify judgments. Major premise: A (All M are P). Minor premise: I (Some S are M). Conclusion: I (Some S are P).
-- Step 2: Check figure. Middle term "metals" is predicate in major, subject in minor → Figure 1.
-- Step 3: Check mode against rules. A-I-I in Figure 1 is Darii, a valid mode.
-- Step 4: Verify 8 rules quickly. Middle distributed? In A premise predicate is not distributed, but subject M is distributed. Rule 3 satisfied. No rule violated.
-**Answer**: `{"reasoning": "Major premise: All M are P (A). Minor: Some S are M (I). Conclusion: Some S are P (I). Middle term 'metals' is predicate in major, subject in minor → Figure 1. A-I-I in Figure 1 is Darii, valid mode. Middle distributed in major premise (subject of A). No rule violated.", "answer": "yes"}`
+- **`references/concepts.md`** — понятия, определения, деление: классификация терминов, проверка определения, дихотомия, род и видовое отличие.
+- **`references/judgments.md`** — суждения: типы A/E/I/O, логический квадрат, распределённость терминов, непосредственные умозаключения (превращение, обращение, противопоставление).
+- **`references/syllogism.md`** — силлогизмы: фигуры и модусы, сведение фигур, условные и разделительные силлогизмы, энтимемы, сориты, дилеммы.
+- **`references/induction.md`** — индукция: методы Милля, гипотеза, аналогия, классификация, приблизительные обобщения.
+- **`references/errors.md`** — каталог логических ошибок, софизмы и паралогизмы.
+- **`references/laws.md`** — четыре закона мышления.
 
-### Pattern B: Detect a logical error
+Для ревью и правки связного текста почти всегда нужны `errors.md` + `syllogism.md`; остальное — по содержанию текста.
 
-**User**: "All historians are impartial. Naturalists are not historians. Therefore naturalists are not impartial."
-**Agent thinking**:
-- Step 1: Form. Major: All M are P (A). Minor: No S are M (E). Conclusion: No S are P (E). Figure 2.
-- Step 2: Rule 4 check. Predicate P = "impartial" is not distributed in major premise (predicate of A), but in conclusion it is distributed (predicate of E). This is illicit major (illicit process of the major term).
-**Answer**: `{"reasoning": "Major: All M are P (A). Minor: No S are M (E). Conclusion: No S are P (E). Figure 2. Predicate P = 'impartial' is not distributed in major premise (predicate of A), but in conclusion it is distributed (predicate of E). This is illicit major (illicit process of the major term).", "answer": "no"}`
+## Законы мышления (держи в уме всегда)
 
-### Pattern C: Immediate inference — conversion
+1. **Закон тождества**: понятие должно сохранять одно и то же значение на всём протяжении рассуждения.
+2. **Закон противоречия**: A и не-A не могут быть истинны одновременно в одном и том же отношении.
+3. **Закон исключённого третьего**: между «A есть B» и «A не есть B» нет третьего (tertium non datur).
+4. **Закон достаточного основания**: всякое суждение должно иметь логическое основание. Не путай логическое основание (ratio cognoscendi) с реальной причиной (ratio fiendi).
 
-**User**: "Convert: All squares are rectangles."
-**Agent thinking**:
-- Step 1: A-judgment. Predicate "rectangles" is not distributed in A.
-- Step 2: Pure conversion impossible because predicate would become subject of A and thus distributed, which is illicit.
-- Step 3: Convert by limitation (per accidens): "Some rectangles are squares" (I-judgment).
-**Answer**: `{"reasoning": "A-judgment: All squares are rectangles. Predicate 'rectangles' is not distributed in A. Pure conversion impossible because predicate would become subject and thus distributed, which is illicit. Convert by limitation (per accidens): 'Some rectangles are squares' (I-judgment).", "answer": "Some rectangles are squares."}`
+## Экспресс-проверка силлогизма (8 правил)
 
-### Pattern D: Identify the opposition relation
+1. Ровно 3 термина (следи за двусмысленностью — учетверение терминов, quaternio terminorum).
+2. Ровно 3 суждения (2 посылки + вывод).
+3. Средний термин распределён хотя бы в одной посылке.
+4. Термин, не распределённый в посылке, не может быть распределён в выводе (недозволенное расширение большего/меньшего термина).
+5. Из двух отрицательных посылок вывода нет.
+6. Одна отрицательная посылка — вывод отрицательный (и наоборот).
+7. Из двух частных посылок вывода нет.
+8. Одна частная посылка — вывод частный.
 
-**User**: "If 'All planets revolve around the Sun' is true, what about 'Some planets do not revolve around the Sun'?"
-**Agent thinking**:
-- Step 1: A-judgment vs O-judgment → contradictories.
-- Step 2: By definition of contradiction, if A is true, O must be false.
-**Answer**: `{"reasoning": "A-judgment vs O-judgment → contradictories. By definition of contradiction, if A is true, O must be false.", "answer": "no"}`
+Нарушено любое правило — силлогизм неправилен. Назови ошибку.
 
-### Pattern E: Induction — Mill's method
+Распределённость терминов: в A распределён только субъект, в E — оба, в I — ни один, в O — только предикат.
 
-**User**: "In three factories using different machines but the same lubricant, the same gear wear occurs. What method applies?"
-**Agent thinking**:
-- Step 1: Multiple cases with varying circumstances (different machines) but one common factor (same lubricant).
-- Step 2: The phenomenon (gear wear) appears in all cases where the common factor is present.
-- Step 3: This matches the Method of Agreement.
-**Answer**: `{"reasoning": "Multiple cases with varying circumstances (different machines) but one common factor (same lubricant). The phenomenon (gear wear) appears in all cases where the common factor is present. This matches the Method of Agreement.", "answer": "Method of Agreement"}`
+## Быстрый каталог ошибок (для ревью)
+
+Полный каталог — в `references/errors.md`. Самые частые в живых текстах:
+
+| Ошибка | Как выглядит |
+|---|---|
+| Подмена тезиса (ignoratio elenchi) | Доказывается не то, что требовалось |
+| Предвосхищение основания (petitio principii) | Посылка сама нуждается в доказательстве или содержит тезис |
+| Круг в доказательстве (circulus in demonstrando) | A доказывается через B, а B — через A |
+| Argumentum ad hominem | Критика автора вместо аргумента |
+| Post hoc ergo propter hoc | «После» принято за «вследствие» |
+| Поспешное обобщение (fallacia fictae universalitatis) | Общий вывод из 1–2 случаев |
+| Ложная аналогия | Перенос свойств по поверхностному сходству |
+| Утверждение следствия | «Если A, то B. B. Значит, A» |
+| Отрицание основания | «Если A, то B. Не-A. Значит, не-B» |
+| Учетверение терминов (quaternio terminorum) | Средний термин меняет значение между посылками |
+| От сказанного с ограничением к безусловному (a dicto secundum quid) | Верное при условии выдаётся за верное всегда |
+| От собирательного к разделительному смыслу (и наоборот) | Свойство целого переносится на каждую часть или наоборот |
+| Ложная дилемма (неполное деление) | «Либо A, либо B», хотя есть C |
+
+## Примеры
+
+### Пример 1: задача — проверить силлогизм
+
+**Пользователь**: «Все металлы — элементы. Некоторые тела — металлы. Следовательно, некоторые тела — элементы».
+**Разбор**: Большая посылка: Все M суть P (A). Меньшая: Некоторые S суть M (I). Вывод: Некоторые S суть P (I). Средний термин «металлы» — субъект большей посылки, предикат меньшей → фигура 1. Модус A-I-I в фигуре 1 — Darii, правильный модус. Средний термин распределён в большей посылке (субъект A). Ни одно из 8 правил не нарушено. **Вывод: силлогизм правилен.**
+
+### Пример 2: задача — найти ошибку
+
+**Пользователь**: «Все историки беспристрастны. Естествоиспытатели — не историки. Значит, естествоиспытатели небеспристрастны».
+**Разбор**: Большая: Все M суть P (A). Меньшая: Ни одно S не есть M (E). Вывод: Ни одно S не есть P (E). Термин P «беспристрастны» не распределён в большей посылке (предикат A), но распределён в выводе (предикат E). Нарушено правило 4 — **недозволенное расширение большего термина**. Силлогизм неправилен.
+
+### Пример 3: задача — обращение суждения
+
+**Пользователь**: «Обрати: все квадраты — прямоугольники».
+**Разбор**: Суждение A. Предикат «прямоугольники» в A не распределён, поэтому чистое обращение невозможно (предикат стал бы распределённым субъектом). Обращение с ограничением (conversio per accidens): **«Некоторые прямоугольники — квадраты»** (I).
+
+### Пример 4: задача — метод Милля
+
+**Пользователь**: «На трёх заводах разные станки, но одна и та же смазка — и одинаковый износ шестерён. Какой это метод?»
+**Разбор**: Несколько случаев с разными обстоятельствами (станки) и одним общим (смазка); явление наступает во всех случаях, где есть общее обстоятельство. Это **метод сходства**. Вывод вероятный: для надёжности нужен метод разницы (тот же завод, замена смазки).
+
+### Пример 5: режим ревью
+
+**Пользователь**: «Проверь логику: После внедрения нового фреймворка продажи упали на 10%. Очевидно, фреймворк и обрушил продажи. Все успешные компании используют старый стек, значит, и нам надо вернуться на него».
+**Ответ (сокращённо)**:
+
+**Вердикт:** найдено 3 ошибки (2 критичных, 1 спорная).
+
+| № | Место | Ошибка | Почему | Как исправить |
+|---|---|---|---|---|
+| 1 | «фреймворк и обрушил продажи» | Post hoc ergo propter hoc | Последовательность во времени выдана за причинность; других причин (сезонность, рынок) автор не исключил | Ослабить: «после внедрения продажи упали; причинную связь нужно проверить (метод разницы: сравнить с сегментом без фреймворка)» |
+| 2 | «Все успешные компании используют старый стек» | Поспешное обобщение (fallacia fictae universalitatis) | Общая посылка не обоснована ни одним примером | Привести данные или ослабить до «многие известные нам компании» |
+| 3 | «значит, и нам надо вернуться» | Скрытая посылка (энтимема) | Вывод требует посылки «что делают успешные компании, следует делать и нам» — она спорна | Проговорить посылку и обосновать применимость чужого опыта |
+
+**Скрытые посылки:** «других причин падения не было»; «мы станем успешными, повторяя чужой стек».
+
+### Пример 6: режим правки
+
+Тот же текст, просьба «исправь логику». После краткой диагностики (как выше) — переписанный текст:
+
+> После внедрения нового фреймворка продажи упали на 10%. Совпадение по времени ещё не доказывает причинность: прежде чем откатываться, сравним динамику с сегментом, где фреймворк не внедрялся. Некоторые компании из нашей ниши работают на старом стеке — если проверка покажет, что дело именно во фреймворке, возврат на старый стек будет обоснованным вариантом.
+
+**Список правок:** 1) причинное утверждение ослаблено до совпадения по времени + предложена проверка методом разницы (устранён post hoc); 2) «все успешные компании» → «некоторые компании из нашей ниши» (устранено поспешное обобщение); 3) категоричный вывод заменён условным — проговорено основание (устранена спорная энтимема).
+
+### Пример 7: бенчмарк (BQA)
+
+**Пользователь**: «Если суждение "Все планеты вращаются вокруг Солнца" истинно, истинно ли "Некоторые планеты не вращаются вокруг Солнца"? Ответь да или нет».
+**Ответ**: `{"reasoning": "Суждение A и суждение O — противоречащие (contradictoriae) по логическому квадрату. Если A истинно, O необходимо ложно.", "answer": "no"}`

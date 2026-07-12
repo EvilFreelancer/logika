@@ -1,71 +1,71 @@
-# Laws of Thought
+# Законы мышления
 
-The laws of thought are formal axioms that govern correct reasoning. They do not prescribe content; they prescribe the form that any valid reasoning must take.
+Законы мышления — это формальные аксиомы, которым подчиняется правильное рассуждение. Они не предписывают содержания мысли; они предписывают форму, которой должно следовать всякое правильное рассуждение.
 
-## 1. Law of Identity
+## 1. Закон тождества
 
-**Formula**: A is A.
+**Формула**: A есть A.
 
-**Meaning**: Every concept, once introduced into reasoning, must retain exactly the same meaning throughout. If the meaning shifts, the reasoning becomes invalid.
+**Смысл**: Всякое понятие, введённое в рассуждение, должно сохранять одно и то же содержание на всём его протяжении. Если содержание понятия подменяется, рассуждение теряет силу.
 
-**Example of violation**: Arguing that "salt consists of chlorine and sodium" and later using the word "salt" to mean "any salt" (e.g., Epsom salt), which has a different chemical composition.
+**Пример нарушения**: Высказав суждение «поваренная соль состоит из хлора и натрия», далее употреблять слово «соль» в значении «любая соль» (например, английская соль), имеющая иной химический состав.
 
-**Application**: Check for **equivocation** (using the same word in two senses) and **quaternio terminorum** in syllogisms.
+**Применение**: Проверять рассуждение на **подмену понятия** (употребление одного слова в двух смыслах, *equivocatio*) и на **учетверение терминов** (*quaternio terminorum*) в силлогизмах.
 
-## 2. Law of Non-Contradiction
+## 2. Закон противоречия
 
-**Formula**: A cannot be both B and not-B at the same time and in the same respect.
+**Формула**: A не может в одно и то же время быть B и не-B.
 
-**Meaning**: No object can simultaneously possess and not possess the same attribute in the same relation.
+**Смысл**: Ни одна вещь не может в одно и то же время, в одном и том же отношении и обладать, и не обладать одним и тем же качеством.
 
-**Example of violation**: "This paper is both white and not-white (red)."
+**Пример нарушения**: «Эта бумага в одно и то же время и белая, и не-белая (красная)».
 
-**Application**: Used to refute false theses. If accepting a thesis leads to a contradiction, the thesis must be false (*reductio ad absurdum*).
+**Применение**: Служит для опровержения ложных тезисов. Если принятие тезиса ведёт к противоречию, тезис должен быть ложным (*reductio ad absurdum* — приведение к нелепости).
 
-## 3. Law of Excluded Middle
+## 3. Закон исключённого третьего
 
-**Formula**: Between "A is B" and "A is not B" there is no middle ground.
+**Формула**: Между суждениями «A есть B» и «A есть не-B» не может быть третьего, среднего суждения.
 
-**Meaning**: For any definite proposition, either it or its negation must be true. There is no third possibility (*tertium non datur*).
+**Смысл**: Из двух противоречащих суждений одно необходимо истинно, другое ложно; третьего не дано (*tertium non datur*).
 
-**Example**: A plant is either coniferous or non-coniferous. An animal is either vertebrate or non-vertebrate.
+**Пример**: Растение — или хвойное, или не-хвойное. Животное — или позвоночное, или не-позвоночное.
 
-**Application**: Enables disjunctive reasoning and proof by exclusion (*modus tollendo ponens*).
+**Применение**: Обосновывает разделительные умозаключения и доказательство путём исключения (*modus tollendo ponens*).
 
-## 4. Law of Sufficient Reason
+## 4. Закон достаточного основания
 
-**Formula**: Every judgment must have a sufficient logical ground (reason).
+**Формула**: Всякое суждение должно иметь достаточное логическое основание (*lex rationis sufficientis*).
 
-**Meaning**: Nothing should be accepted as true without a reason. If a judgment is not immediately self-evident, it must be demonstrated from other judgments that are.
+**Смысл**: Ничто не должно приниматься за истину без основания. Если истинность суждения не очевидна непосредственно, оно должно быть выведено из других суждений, истинность которых очевидна.
 
-**Distinction**:
-- **Ratio cognoscendi** (ground of knowledge): the logical basis for believing a proposition.
-- **Ratio fiendi** (ground of becoming): the physical cause of an event.
+**Различение**:
+- **Ratio cognoscendi** (основание познания): логическое основание, по которому мы признаём суждение истинным.
+- **Ratio fiendi** (основание становления): реальная причина события.
 
-**Example**:
-- Logical ground: "The mercury in the thermometer expanded" is the ground for knowing "The room became warmer."
-- Physical cause: "The stove was lit" is the cause of the room becoming warmer.
+**Пример**:
+- Логическое основание: «ртуть термометра расширилась» — основание для суждения «в комнате сделалось теплее».
+- Реальная причина: «затопили печку» — причина того, что в комнате сделалось теплее.
 
-**Application**: Every step in a proof must be justified. Unwarranted assertions violate this law.
+**Применение**: Каждый шаг доказательства должен быть обоснован. Голословные утверждения нарушают этот закон.
 
-## Formal Character of the Laws
+## Формальный характер законов
 
-These laws are **formal**: they do not dictate which concepts to use, but they dictate that whatever concepts are used must obey these constraints. They function like mathematical axioms — universally applicable regardless of subject matter.
+Эти законы **формальны**: они не указывают, какими именно понятиями пользоваться, но требуют, чтобы любые употребляемые понятия подчинялись названным ограничениям. Они действуют подобно математическим аксиомам — приложимы ко всякому содержанию, о каком бы предмете ни шла речь.
 
-## Few-Shot Examples
+## Примеры разбора
 
-**Example 1: Detect violation of identity**
-> "A bow is a weapon of savages. This plant is a bow. Therefore this plant is a weapon."
-- Violation: "Bow" = weapon in major premise, "bow" = onion (vegetable) in minor premise. The middle term changes meaning.
+**Пример 1: Обнаружить нарушение закона тождества**
+> «Лук есть оружие дикарей. Это растение есть лук. Следовательно, это растение есть оружие».
+- Нарушение: в большей посылке «лук» — оружие, в меньшей — огородное растение. Средний термин меняет значение (учетверение терминов).
 
-**Example 2: Detect violation of non-contradiction**
-> "All people are rational. Some people are not rational."
-- A and O are contradictories. Both cannot be true. At least one must be false.
+**Пример 2: Обнаружить нарушение закона противоречия**
+> «Все люди разумны. Некоторые люди не разумны».
+- Суждения A и O — противоречащие. Оба не могут быть истинными: по крайней мере одно из них ложно.
 
-**Example 3: Apply excluded middle in proof**
-> "A triangle is either acute, obtuse, or right. It is not acute and not obtuse. Therefore it is right."
-- Valid disjunctive syllogism based on excluded middle.
+**Пример 3: Применить закон исключённого третьего в доказательстве**
+> «Треугольник — или остроугольный, или тупоугольный, или прямоугольный. Он не остроугольный и не тупоугольный. Следовательно, он прямоугольный».
+- Правильный разделительный силлогизм, опирающийся на закон исключённого третьего.
 
-**Example 4: Detect violation of sufficient reason**
-> "This stock will rise tomorrow because I feel it will."
-- No logical ground provided. Violates the law of sufficient reason.
+**Пример 4: Обнаружить нарушение закона достаточного основания**
+> «Эти акции завтра вырастут, потому что я так чувствую».
+- Логическое основание не приведено. Нарушен закон достаточного основания.
