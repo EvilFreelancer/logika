@@ -1,143 +1,155 @@
-# Syllogism: Deductive Inference
+# Силлогизм: дедуктивные умозаключения
 
-## 1. Structure
+## 1. Строение силлогизма
 
-A syllogism is a deductive inference with **two premises** and **one conclusion**, containing exactly **three terms**.
+Силлогизм — дедуктивное умозаключение из **двух посылок** и **одного заключения**, содержащее ровно **три термина**.
 
-- **Major term (P)**: predicate of the conclusion.
-- **Minor term (S)**: subject of the conclusion.
-- **Middle term (M)**: appears in both premises but not in the conclusion. It links S and P.
+- **Больший термин (P)** — сказуемое заключения.
+- **Меньший термин (S)** — подлежащее заключения.
+- **Средний термин (M)** — входит в обе посылки, но не входит в заключение; служит связующим звеном между S и P.
 
-- **Major premise**: contains P and M.
-- **Minor premise**: contains S and M.
-- **Conclusion**: contains S and P.
+- **Большая посылка** — содержит P и M.
+- **Меньшая посылка** — содержит S и M.
+- **Заключение** — содержит S и P.
 
-## 2. Axiom of the Syllogism (Dictum de omni et de nullo)
+## 2. Аксиома силлогизма (dictum de omni et de nullo)
 
-- What is affirmed of a whole class is affirmed of everything contained in it.
-- What is denied of a whole class is denied of everything contained in it.
+- Всё, что утверждается относительно целого класса, утверждается и относительно каждой вещи, содержащейся в этом классе.
+- Всё, что отрицается относительно целого класса, отрицается и относительно всего, что в нём содержится.
 
-## 3. Eight Rules of the Syllogism
+Полная латинская формула: *quidquid de omni valet, valet etiam de quibusdam et de singulis; quidquid de nullo valet, nec de quibusdam nec de singulis valet*.
 
-1. **Exactly three terms**. If a term is used in two senses (equivocation), there are four terms — *quaternio terminorum*.
-2. **Exactly three judgments** (2 premises + 1 conclusion).
-3. **Middle term must be distributed at least once**.
-4. **A term not distributed in the premises cannot be distributed in the conclusion** (illicit major / illicit minor).
-5. **Two negative premises yield no conclusion**.
-6. **One negative premise requires a negative conclusion** (and conversely, a negative conclusion requires one negative premise).
-7. **Two particular premises yield no conclusion**.
-8. **One particular premise requires a particular conclusion**.
+## 3. Восемь правил силлогизма
 
-## 4. Figures of the Syllogism
+1. **Ровно три термина**. Если термин употреблён в двух смыслах (двусмысленность), терминов оказывается четыре — **учетверение терминов** (*quaternio terminorum*).
+2. **Ровно три суждения** (2 посылки + 1 заключение).
+3. **Средний термин должен быть взят во всём объёме (распределён) хотя бы в одной посылке**.
+4. **Термин, не взятый во всём объёме в посылке, не может быть взят во всём объёме в заключении** — иначе ошибка *illicitus processus*: недозволенное расширение большего или меньшего термина.
+5. **Из двух отрицательных посылок нельзя вывести никакого заключения**.
+6. **Если одна посылка отрицательна, заключение отрицательно** (и наоборот: отрицательное заключение требует отрицательной посылки).
+7. **Из двух частных посылок нельзя вывести никакого заключения**.
+8. **Если одна посылка частная, заключение должно быть частным**.
 
-Position of the middle term determines the figure:
+## 4. Фигуры силлогизма
 
-| Figure | Major Premise | Minor Premise | Character / Use |
-|--------|---------------|---------------|-----------------|
-| **1**  | M is P        | S is M        | Subsumption: applying general laws to particular cases. |
-| **2**  | P is M        | S is M        | Refutation: rejecting false subsumptions. One premise must be negative. |
-| **3**  | M is P        | M is S        | Proving exceptions to general rules. Conclusion must be particular. |
-| **4**  | P is M        | M is S        | Artificial; rarely used in practice. |
+Фигуру определяет положение среднего термина в посылках:
 
-## 5. Valid Modes (19 Correct Moods)
+| Фигура | Большая посылка | Меньшая посылка | Характер / применение |
+|--------|-----------------|-----------------|-----------------------|
+| **1**  | M есть P        | S есть M        | Подчинение: применение общих положений (законов, норм) к частным случаям. |
+| **2**  | P есть M        | S есть M        | Опровержение ложных подчинений; одна посылка должна быть отрицательной. По этой фигуре строятся судебные приговоры. |
+| **3**  | M есть P        | M есть S        | Доказательство исключений из общих положений; заключение всегда частное. |
+| **4**  | P есть M        | M есть S        | Галеновская фигура; искусственна и практически не употребляется. |
 
-| Figure | Modes | Mnemonic Verse |
-|--------|-------|----------------|
+## 5. Правильные модусы (19 модусов)
+
+| Фигура | Модусы | Мнемонический стих |
+|--------|--------|--------------------|
 | 1 | Barbara, Celarent, Darii, Ferio | *Barbara, Celarent, Darii, Ferioque prioris* |
 | 2 | Cesare, Camestres, Festino, Baroko | *Cesare, Camestres, Festino, Baroko, sekundae* |
 | 3 | Darapti, Disamis, Datisi, Felapton, Bokardo, Ferison | *Tertia Darapti, Disamis, Datisi, Felapton, Bokardo, Ferison habet* |
 | 4 | Bramantip, Camenes, Dimaris, Fesapo, Fresison | *Quarta insuper addit Bramantip, Camenes, Dimaris, Fesapo, Fresison* |
 
-**How to read the mnemonic names:**
-- The vowels indicate the mood (A, E, I, O).
-- **s** = the preceding premise undergoes simple conversion.
-- **p** = the preceding premise undergoes conversion by limitation (per accidens).
-- **m** = premises must be transposed (metathesis).
-- **B, C, D, F** = the first-figure mode to which the reduction leads.
-- **k** = the mode is proved by *reductio ad absurdum* (Baroko, Bokardo).
+**Как читать имена модусов:**
+- Гласные обозначают вид суждений (A, E, I, O): Barbara = AAA, Celarent = EAE.
+- **s** — предшествующее суждение подвергается чистому обращению (*conversio simplex*).
+- **p** — предшествующее суждение обращается посредством ограничения (*per accidens*).
+- **m** — посылки нужно переставить (*metathesis*, *mutatio praemissarum*).
+- **B, C, D, F** — начальная буква указывает модус фигуры 1, к которому ведёт сведение.
+- **k** — модус доказывается через *reductio ad absurdum* (Baroko, Bokardo).
 
-### Examples of Modes
+Ещё 5 сочетаний (AAI и EAO по фиг. 1 и т.п.) правильны, но дают **ослабленное** (частное вместо возможного общего) заключение и потому отброшены.
 
-**Barbara (1st fig., AAA)**
-- All M are P. All S are M. ∴ All S are P.
-- Ex: All predators eat meat. Tigers are predators. ∴ Tigers eat meat.
+### Примеры модусов
 
-**Celarent (1st fig., EAE)**
-- No M are P. All S are M. ∴ No S are P.
-- Ex: No insect has more than 3 pairs of legs. Bees are insects. ∴ Bees do not have more than 3 pairs of legs.
+**Barbara (фиг. 1, AAA)**
+- Все M суть P. Все S суть M. ∴ Все S суть P.
+- Пример: Все хищные животные питаются мясом. Тигры суть хищные животные. ∴ Тигры питаются мясом.
 
-**Cesare (2nd fig., EAE)**
-- No P are M. All S are M. ∴ No S are P.
-- Ex: No just person is envious. All ambitious people are envious. ∴ No ambitious person is just.
+**Celarent (фиг. 1, EAE)**
+- Ни одно M не есть P. Все S суть M. ∴ Ни одно S не есть P.
+- Пример: Ни одно насекомое не имеет более трёх пар ножек. Пчёлы суть насекомые. ∴ Пчёлы не имеют более трёх пар ножек.
 
-**Baroko (2nd fig., AOO)** — proved by *reductio ad absurdum*.
-- All P are M. Some S are not M. ∴ Some S are not P.
-- Ex: All truly moral actions spring from correct motives. Some benevolent actions do not spring from such motives. ∴ Some benevolent actions are not truly moral.
+**Cesare (фиг. 2, EAE)**
+- Ни одно P не есть M. Все S суть M. ∴ Ни одно S не есть P.
+- Пример: Ни один справедливый человек не завистлив. Всякий честолюбивый завистлив. ∴ Ни один честолюбивый не есть справедлив.
 
-## 6. Reduction of Figures to Figure 1
+**Baroko (фиг. 2, AOO)** — доказывается через *reductio ad absurdum*.
+- Все P суть M. Некоторые S не суть M. ∴ Некоторые S не суть P.
+- Пример: Все истинно моральные действия совершаются из правильных мотивов. Некоторые благодетельные действия не совершаются из таких мотивов. ∴ Некоторые благодетельные действия не суть истинно моральные.
 
-Other figures can be reduced to Figure 1 to demonstrate their validity.
+## 6. Сведение (редукция) фигур к фигуре 1
 
-- **Cesare → Celarent**: simple conversion of the major premise (E).
-- **Darapti → Darii**: conversion by limitation of the minor premise (A→I).
-- **Bramantip → Barbara**: transpose premises (m), then convert conclusion by limitation (p).
-- **Baroko / Bokardo**: proved by *reductio ad absurdum* using Barbara.
+Модусы фигуры 1 обладают наибольшей очевидностью (к ним прямо применима аксиома силлогизма), поэтому модусы прочих фигур сводят к фигуре 1.
 
-## 7. Conditional & Disjunctive Syllogisms
+- **Cesare → Celarent**: чистое обращение большей посылки (E).
+- **Camestres → Celarent**: перестановка посылок (m), чистое обращение меньшей посылки и заключения (s).
+- **Darapti → Darii**: обращение меньшей посылки посредством ограничения (A → I).
+- **Bramantip → Barbara**: перестановка посылок (m), затем обращение заключения посредством ограничения (p).
+- **Baroko / Bokardo**: доказываются через *reductio ad absurdum* (приведение к нелепости) с помощью Barbara — посылка, обозначенная перед буквой k, заменяется суждением, противоречащим заключению; если отрицать заключение, придётся отрицать одну из принятых посылок.
 
-### Conditional (Hypothetical)
+## 7. Условные и разделительные силлогизмы
 
-**Modus ponens** (constructive):
-- If A then B. A. ∴ B.
+### Условный (гипотетический) силлогизм
 
-**Modus tollens** (destructive):
-- If A then B. Not B. ∴ Not A.
+В условном суждении «если A есть B, то C есть D» первая часть — **основание** (*antecedens*), вторая — **следствие** (*consequens*).
 
-**Invalid forms** (fallacies):
-- Affirming the consequent: If A then B. B. ∴ A. ❌
-- Denying the antecedent: If A then B. Not A. ∴ Not B. ❌
+**Modus ponens (утверждающий, конструктивный)**:
+- Если A, то B. A есть. ∴ B есть.
+- Пример: Если дождь идёт, то почва мокрая. Дождь идёт. ∴ Почва мокрая.
 
-### Disjunctive
+**Modus tollens (отрицающий, деструктивный)**:
+- Если A, то B. B нет. ∴ A нет.
+- Пример: Если дождь идёт, то почва мокрая. Почва не мокрая. ∴ Дождь не идёт.
 
-**Modus ponendo-tollens**:
-- A is either B, C, or D. A is B. ∴ A is neither C nor D.
+**Неправильные формы (ошибки)** — одно и то же следствие может порождаться разными основаниями:
+- «От утверждения следствия к утверждению основания»: если A, то B; B; ∴ A. Неверно.
+- «От отрицания основания к отрицанию следствия»: если A, то B; не-A; ∴ не-B. Неверно.
+- Пример: если кто-нибудь читает хорошие книги, то он приобретает познания; N приобрёл познания — но, возможно, иным путём (лекции, общение с учёными).
 
-**Modus tollendo-ponens**:
-- A is either B, C, or D. A is neither B nor C. ∴ A is D.
+### Разделительный силлогизм
 
-Used in geometry as **proof by exclusion** (indirect proof).
+**Modus ponendo tollens**:
+- A есть или B, или C, или D. A есть B. ∴ A не есть ни C, ни D.
+- Пример: Треугольник — остроугольный, тупоугольный или прямоугольный. Данный треугольник остроугольный. ∴ Он не прямоугольный и не тупоугольный.
 
-## 8. Abbreviated and Complex Syllogisms
+**Modus tollendo ponens**:
+- A есть или B, или C, или D. A не есть ни B, ни C. ∴ A есть D.
 
-- **Enthymeme**: syllogism with one part omitted.
-  - 1st kind: missing major premise.
-  - 2nd kind: missing minor premise.
-  - 3rd kind: missing conclusion (implied).
-- **Epicheirema**: syllogism where both premises are themselves enthymemes (conclusions with middle terms).
-- **Polysyllogism (sorites)**:
-  - Chain of syllogisms where the conclusion of one is a premise of the next.
-  - **Progressive**: from more general to less general.
-  - **Regressive**: from less general to more general.
-- **Sorites (Aristotelian)**: chain where minor premises are omitted.
-- **Sorites (Goclenian)**: chain where major premises are omitted.
+Условие правильности: члены деления (альтернативы) перечислены сполна и исключают друг друга. Modus tollendo ponens употребляется в геометрии как **непрямое доказательство** (доказательство через исключение).
 
-## Few-Shot Examples
+Существуют и **условно-разделительные (лемматические)** силлогизмы — дилемма, трилемма и т.д.; их главный источник ошибок — неполное перечисление альтернатив.
 
-**Example 1: Check validity**
-> "All French are Europeans. All Parisians are Europeans. Therefore all Parisians are French."
-- Middle = Europeans. Figure 2 (P-M, S-M).
-- M is undistributed in both premises (predicate of A in both).
-- Violates Rule 3. Invalid.
+## 8. Сокращённые и сложные силлогизмы
 
-**Example 2: Detect equivocation**
-> "An onion is a weapon of savages. This plant is an onion. Therefore this plant is a weapon."
-- "Onion" means different things in the two premises (vegetable vs. bow). Quaternio terminorum. Invalid.
+- **Энтимема** — силлогизм, часть которого держится «в уме» и опускается.
+  - Вид 1: пропущена большая посылка.
+  - Вид 2: пропущена меньшая посылка.
+  - Вид 3: пропущено заключение (оно очевидно).
+- **Эпихейрема** — силлогизм, обе посылки которого сами являются энтимемами (заключениями со средним термином). Пример: «Ложь заслуживает презрения, так как она безнравственна. Лесть есть ложь, так как она есть умышленное извращение истины. ∴ Лесть должна быть презираема».
+- **Полисиллогизм** — цепь силлогизмов, где заключение одного (**просиллогизма**) служит посылкой следующего (**эписиллогизма**).
+  - **Прогрессивный**: от более общего к менее общему (позвоночные → млекопитающие → хищные → тигры).
+  - **Регрессивный**: от менее общего к более общему.
+- **Сорит аристотелевский** — цепь, в которой опущены меньшие посылки (Буцефал есть лошадь; лошадь есть четвероногое; четвероногое есть животное; животное есть субстанция; ∴ Буцефал есть субстанция).
+- **Сорит гоклениевский** — цепь, в которой опущены большие посылки (та же цепь, читаемая от общего к частному).
 
-**Example 3: Reduce Cesare to Celarent**
-> Cesare: No P are M. All S are M. ∴ No S are P.
-- Convert major: No M are P. All S are M. ∴ No S are P. → Celarent (Figure 1).
+## Примеры разбора
 
-**Example 4: Reconstruct an enthymeme**
-> "Stinginess deserves blame, for it is a vice."
-- Missing major: "All vices deserve blame."
-- Full syllogism: All vices deserve blame. Stinginess is a vice. ∴ Stinginess deserves blame.
+**Пример 1. Проверка правильности**
+> «Все французы суть европейцы. Все парижане суть европейцы. Следовательно, все парижане — французы».
+- Средний термин — «европейцы». Фигура 2 (P—M, S—M).
+- M не распределён ни в одной посылке (сказуемое суждения A в обеих).
+- Нарушено правило 3. Силлогизм неправилен.
+
+**Пример 2. Обнаружение учетверения терминов**
+> «Лук есть оружие дикарей. Это растение есть лук. Следовательно, это растение есть оружие дикарей».
+- «Лук» употреблён в разных смыслах (растение и оружие). Quaternio terminorum. Вывод неправилен.
+
+**Пример 3. Сведение Cesare к Celarent**
+> Cesare: Ни одно P не есть M. Все S суть M. ∴ Ни одно S не есть P.
+- Чистое обращение большей посылки: Ни одно M не есть P. Все S суть M. ∴ Ни одно S не есть P. → Celarent (фигура 1).
+
+**Пример 4. Восстановление энтимемы**
+> «Скупость заслуживает порицания, потому что она есть порок».
+- Пропущена большая посылка: «Всякий порок заслуживает порицания».
+- Полный силлогизм: Всякий порок заслуживает порицания. Скупость есть порок. ∴ Скупость заслуживает порицания.

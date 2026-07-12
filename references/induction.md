@@ -1,128 +1,149 @@
-# Induction, Scientific Methods, Analogy, and Hypothesis
+# Индукция, научный метод, аналогия, гипотеза
 
-## 1. Induction vs. Deduction
+## 1. Индукция и дедукция
 
-- **Deduction**: from general to particular. If the premises are true and the form is valid, the conclusion is necessarily true.
-- **Induction**: from particular cases to a general conclusion. The conclusion extends beyond the observed cases.
+- **Дедукция**: умозаключение от общего к частному. Если посылки истинны, а форма правильна, заключение необходимо истинно.
+- **Индукция (наведение)**: умозаключение от частных случаев к общему положению. Заключение выходит за пределы наблюдённых случаев: истинное в исследованных случаях признаётся истинным и для всех сходных с ними.
 
-## 2. Complete vs. Incomplete Induction
+## 2. Полная и неполная индукция
 
-- **Complete**: conclusion covers only the cases examined (exhaustive enumeration). It is certain but not truly inductive in the sense of discovering the new; it is a summary.
-  - Example: "All months have ≤ 31 days" (after checking each month).
-- **Incomplete**: from examined cases to all cases of the class. This is genuine induction.
-  - Example: "All gases are compressible" (from testing some gases).
+- **Полная индукция**: в заключении говорится только о тех случаях, о которых говорится и в посылках (исчерпывающее перечисление). Вывод достоверен, но ничего нового не даёт — это лишь резюмирование посылок.
+  - Пример: «Ни один месяц не имеет более 31 дня» (после проверки всех двенадцати месяцев).
+- **Неполная индукция**: от исследованной части класса умозаключаем ко всему классу. Это и есть индукция в собственном смысле — умозаключение от известного к неизвестному.
+  - Пример: «Все газы сжимаемы» (после испытания лишь некоторых газов).
 
-## 3. Popular vs. Scientific Induction
+## 3. Популярная и научная индукция
 
-- **Popular (crude) induction**: simple enumeration without contradictory instances.
-  - Example: "All swans are white" (until black swans were found).
-  - Unreliable because it relies on accidental conjunctions rather than necessary connections.
-- **Scientific induction**: analyzes each case, strips away the accidental, isolates essential attributes, and connects the conclusion with other established generalizations.
-  - Seeks **necessary connections**, not merely observed regularities.
+- **Популярная индукция** — индукция через простое перечисление (per enumerationem simplicem), в котором не встретилось противоречащего случая.
+  - Пример: «Все лебеди белы» (пока не нашли чёрных лебедей).
+  - Недостоверна: опирается на случайную, а не необходимую связь. Цвет перьев не связан необходимо с природой лебедя.
+- **Научная индукция**: исследует каждый отдельный случай, отбрасывает всё случайное, ищет существенные признаки и приводит вывод в связь и согласие с другими обобщениями.
+  - Ищет **необходимую связь** вещей, а не наблюдённую регулярность. «Лебеди дышат кислородом» — правильная научная индукция: без этого свойства птица немыслима.
 
-## 4. Laws of Nature
+## 4. Законы природы
 
-A law of nature expresses a **constant property** or **necessary connection** of phenomena.
+Закон природы — предложение, выражающее **постоянное свойство** или **необходимую связь** явлений.
 
-- **Universality**: applies to a class, not a single fact.
-- **Necessity**: the connection must hold without exception.
+- **Всеобщность**: закон относится к классу явлений, а не к единичному факту.
+- **Необходимость**: связь должна иметь место без исключений.
 
-If a single counterexample is found, the generalization ceases to be a law.
+Основание индукции — убеждение в единообразном порядке природы: вещи обладают постоянными свойствами и в одинаковых условиях действуют единообразно. Как только найден хоть один случай, где обобщение не применяется, оно перестаёт быть законом.
 
-## 5. Mill's Methods of Experimental Inquiry
+## 5. Методы индуктивного исследования (методы Милля)
 
-### Method of Agreement
+**Причина** — явление, возникновение которого неизбежно влечёт возникновение другого явления (действия), а уничтожение — уничтожение действия. Для отыскания причин служат **наблюдение** (изучение явлений, как они даны в природе) и **опыт (эксперимент)** — произвольное вмешательство в ход явлений, позволяющее изолировать и повторять их.
 
-"If two or more instances of a phenomenon have only one circumstance in common, that circumstance is the cause."
+### Метод сходства (согласия)
 
-- Symbolic: Case 1: ABC → abc. Case 2: ADE → ade. Common circumstance A → cause of a.
-- Use when the phenomenon occurs in varied settings.
+«Если двум или большему числу случаев исследуемого явления обще лишь одно обстоятельство, то это обстоятельство и есть причина данного явления».
 
-### Method of Difference
+- Схема: 1-й случай: АВС — авс. 2-й случай: АDЕ — аdе. Общее обстоятельство А — причина а.
+- Применять, когда явление наблюдается в разнообразных обстановках (уголь в печи, костёр, спиртовка — общий элемент огонь, он и есть причина парообразования).
 
-"If an instance in which the phenomenon occurs and an instance in which it does not occur have every circumstance in common except one, that one circumstance is the cause."
+### Метод разницы
 
-- Symbolic: Case 1: ABC → abc. Case 2: BC → bc. Missing A → absence of a.
-- Use when you can create a controlled comparison (experiment).
+«Если случай, в котором явление наступает, и случай, в котором оно не наступает, сходны во всех обстоятельствах, кроме одного, то это обстоятельство есть причина или необходимая часть причины явления».
 
-### Joint Method of Agreement and Difference
+- Схема: 1-й случай: АВС — авс. 2-й случай: ВС — вс. Устранение А влечёт устранение а, значит А — причина а.
+- Применять при возможности контролируемого сравнения. Классика: в безвоздушном сосуде пух падает с той же скоростью, что и свинец, — причина неравенства скоростей была в сопротивлении воздуха.
+- Современный пример: поиск причины бага. Программа работает на ревизии N и падает на ревизии N+1; единственная разница — один коммит. Вывод: причина бага — этот коммит (так работает git bisect).
 
-Combination of the two above. Stronger than either alone.
+### Соединённый метод сходства и разницы
 
-### Method of Residues
+Комбинация двух предыдущих; сильнее каждого порознь.
 
-"Subtract from a phenomenon the part known by prior inductions to be the effect of certain antecedents; the remainder is the effect of the remaining antecedents."
+- Пример Челпанова: растение постоянно в изобилии растёт на одной почве и не растёт ни на какой другой — причина произрастания в составе этой почвы.
 
-- Example: Discovery of Neptune by accounting for known gravitational influences on Uranus; the residual perturbation implied an unknown planet.
+### Метод остатков
 
-### Method of Concomitant Variations
+«Вычти из явления ту часть, которая по прежним индукциям известна как действие определённых предшествующих; остаток будет действием остальных предшествующих».
 
-"If a change in one phenomenon is always accompanied by a corresponding change in another, they are causally connected (or correlated)."
+- Схема: АВС — авс; известно, что А — причина а, В — причина в; следовательно, С — причина с.
+- Пример: открытие Нептуна. Из возмущений в движении Урана вычли влияние всех известных светил; остаток указал на неизвестную планету.
 
-- Use when phenomena cannot be isolated or removed (e.g., gravity, social trends).
-- Example: Lunar position changes correlate with tidal height changes.
+### Метод сопутствующих изменений
 
-## 6. Analogy
+«Если каждое изменение предшествующего А сопровождается изменением последующего а, то А вполне или отчасти есть причина а или связано с ним причинной связью».
 
-**Definition**: Inferring that because two things are alike in some known properties, they are alike in other properties.
+- Применять, когда явления нельзя изолировать или устранить (теплота и объём тел, Луна и приливы, общественные явления).
+- Пример: изменения положения Луны сопровождаются изменениями высоты воды в океане — Луна есть причина приливов и отливов.
+- Современный пример: A/B-тест. Меняем только один элемент интерфейса на части аудитории и следим, меняется ли конверсия вместе с ним; устойчивое сопутствующее изменение — свидетельство причинной связи.
 
-- Unlike induction, analogy goes from particulars to particulars, not to a general law.
-- Conclusion is only probable.
+## 6. Аналогия
 
-**Degree of probability depends on**:
-1. Number of known similarities.
-2. Number of known dissimilarities (fewer = stronger).
-3. Extent of our knowledge of the things compared (more known properties = stronger basis).
+**Определение**: аналогия есть умозаключение, в котором от сходства двух вещей в известном числе свойств заключают к сходству в других свойствах.
 
-Example: Mars resembles Earth (atmosphere, clouds, polar ice). By analogy, Mars may be inhabited. This is plausible but not certain.
+- В отличие от индукции, аналогия идёт от частного к частному, а не к общему закону.
+- Заключение всегда лишь вероятно.
 
-## 7. Hypothesis
+**Условия убедительности аналогии** (степень вероятности зависит от трёх обстоятельств):
+1. Количество усматриваемых сходств (чем больше — тем сильнее).
+2. Количество известных несходств (чем меньше — тем сильнее).
+3. Объём нашего знания о сравниваемых вещах (чем больше известных свойств, тем прочнее основа; чем больше неизвестных — тем меньше достоверность).
 
-**Definition**: A supposition adopted as true in order to derive consequences that can be compared with actual facts. If consequences agree with facts, the hypothesis is confirmed.
+Сходство должно касаться существенных признаков, а не поверхностных. Аналогия ценна как предварительное построение: она указывает, куда направить исследование, и, став основой гипотезы, может получить оправдание в фактах.
 
-**Stages**:
-1. Formulate the supposition.
-2. Deduce consequences from it.
-3. Compare consequences with observed facts.
+Пример: Марс похож на Землю (атмосфера с облаками, моря, полярные снега) — по аналогии заключают, что Марс, подобно Земле, обитаем. Вывод правдоподобен, но не достоверен.
 
-**Experimentum crucis**: A decisive experiment or fact that confirms one hypothesis while refuting a rival.
+## 7. Гипотеза
 
-- Example: Newton's theory of gravitation vs. Descartes' vortex theory. The motion of comets (against the vortex direction) served as experimentum crucis, favoring Newton.
+**Определение**: гипотезой называется предположение, которое мы считаем истинным, чтобы вывести из него следствия, согласные с действительными фактами или с другими проверенными положениями. Это согласие и служит доказательством гипотезы.
 
-**From hypothesis to theory**: When a hypothesis is uniquely able to explain a phenomenon and its consequences agree with other established truths, it becomes a **theory**.
+**Стадии построения и проверки гипотезы**:
+1. Делаем известное предположение.
+2. Выводим из него следствие или несколько следствий (силлогизация).
+3. Смотрим, соответствуют ли следствия действительности или другим доказанным положениям (проверка).
 
-## 8. Deductive Explanation of Laws
+Наука не строится собиранием фактов наудачу (алхимики за столетия открыли меньше, чем химики за год): исследованием должен руководить план, а для плана нужна гипотеза.
 
-An empirical law (discovered by induction) can be explained by deducing it from higher, more general laws.
+**Experimentum crucis** — решающий факт или опыт, который согласуется с одной гипотезой и противоречит другой, соперничающей.
 
-Three types of explanation:
-1. **Subsumption under a higher law**: Kepler's laws explained by Newton's laws of motion and gravitation.
-2. **Insertion of intermediate links**: Explaining a causal connection A→D by revealing intermediate causes B and C.
-3. **Unification**: Combining several laws under a single more general concept (e.g., combustion and rusting both explained as "oxidation").
+- Пример: теория тяготения Ньютона против вихревой теории Декарта. Движение комет (не в направлении общего вихря планет) послужило experimentum crucis в пользу Ньютона.
 
-**Significance**: Once an empirical law is made derivative, its sphere of application is precisely delimited.
+**От гипотезы к теории**: вероятность гипотезы превращается в достоверность, когда она оказывается единственным объяснением явления, а её следствия согласуются с другими признанными положениями. Доказанная гипотеза называется **теорией**.
 
-## 9. Approximate Generalizations
+## 8. Дедуктивное объяснение законов
 
-When exact laws cannot be found (especially in social and biological sciences), we use approximate generalizations:
+**Эмпирический закон** — закон, найденный индуктивно, но не выведенный из более общего закона («хинин излечивает лихорадку»). Когда его удаётся свести к высшим законам, он становится **производным**.
 
-- Form: "Most S are P", "S are generally P", "S are usually P".
-- They have scientific value for dealing with masses, even though they do not apply to every individual.
+Три вида объяснения:
+1. **Подведение под высший закон**: законы Кеплера объяснены законами движения и тяготения Ньютона.
+2. **Вставка промежуточных звеньев**: причинная связь А→С раскрывается через промежуточный член В (сахар на языке → цепь нервных процессов → ощущение сладкого вкуса).
+3. **Объединение нескольких законов** одним более общим понятием: горение и ржавление железа суть «окисление».
 
-## Few-Shot Examples
+**Значение**: когда эмпирический закон становится производным, точно определяется сфера его приложения. Закон «вода в насосе не поднимается выше 33 футов», сведённый к давлению атмосферы, сразу указал свои границы: на высоких горах вода поднимется ниже, ртуть — ещё ниже.
 
-**Example 1: Identify the method**
-> A plant thrives on soil X but on no other soil. What method?
-- Method of Difference (single differing circumstance).
+## 9. Приблизительные обобщения
 
-**Example 2: Identify the method**
-> In multiple fires, the only common factor is the presence of a particular chemical. What method?
-- Method of Agreement.
+Когда точных законов найти нельзя (особенно в общественных и биологических науках), пользуются приблизительными обобщениями.
 
-**Example 3: Evaluate an analogy**
-> "States are like organisms: they are born, mature, age, and die. Therefore states inevitably perish."
-- Weak analogy. The similarity (developmental stages) is superficial; states and organisms differ radically in structure and regenerative capacity.
+- Форма: «Большинство S суть P», «S большей частью P», «S обыкновенно P».
+- Примеры: «бром успокаивает нервы» (у большинства, не у всех), «англичане предприимчивы».
+- Они имеют научное значение при исследовании масс, хотя и неприложимы к каждому отдельному индивидууму: государственному человеку достаточно знать, как действует большинство.
 
-**Example 4: Check a hypothesis**
-> "If this metal is gold, it will dissolve in aqua regia. It dissolves. Therefore it is gold."
-- Invalid affirmation of the consequent. Dissolving in aqua regia is not unique to gold. Need additional tests for a decisive confirmation.
+## 10. Классификация
+
+**Классификация** — распределение вещей по классам согласно сходству между ними, в порядке, наиболее полезном для припоминания вещей и определения их свойств. Классификация опирается на индукцию: именно индукция устанавливает общие признаки, позволяющие относить предметы в один класс.
+
+- **Естественная классификация** основана на существенных признаках, выражающих природу вещей, и потому позволяет наибольшее число утверждений: зная, что растение — злак, путешественник заключает, что его семена не ядовиты.
+- **Искусственная классификация** кладёт в основу произвольный признак (авторы по первой букве фамилии; система Линнея по числу тычинок). Она удобна для отыскания, но допускает мало утверждений: родственные предметы попадают в далёкие группы (шалфей с двумя тычинками отрывается от губоцветных), а несходные — в одну.
+
+С классификацией связаны **номенклатура** (собрание названий родов и классов: Betula alba) и **терминология** (термины для описания свойств отдельных предметов: «листья ланцетные, сердцевидные»).
+
+## Примеры разбора
+
+**Пример 1. Определить метод**
+> Растение в изобилии растёт на почве X и не растёт ни на какой другой. Какой метод?
+- Соединённый метод сходства и разницы (у Челпанова этот пример иллюстрирует соединённый метод; ядро вывода — единственное различающее обстоятельство).
+
+**Пример 2. Определить метод**
+> При нескольких пожарах единственным общим фактором было присутствие определённого химиката. Какой метод?
+- Метод сходства (согласия).
+
+**Пример 3. Оценить аналогию**
+> «Государства подобны организмам: они рождаются, зреют, стареют и умирают. Следовательно, государства неизбежно погибают».
+- Слабая аналогия: сходство (стадии развития) поверхностно, несходств много, а существенные свойства (структура, способность к обновлению) радикально различны — нарушены все три условия убедительности.
+
+**Пример 4. Проверить гипотезу**
+> «Если этот металл — золото, он растворится в царской водке. Он растворился. Значит, это золото».
+- Ошибка утверждения консеквента: растворимость в царской водке присуща не только золоту. Следствие согласуется с гипотезой, но не доказывает её; нужны дополнительные проверки, в идеале — experimentum crucis против гипотез-соперниц (платина тоже растворяется).

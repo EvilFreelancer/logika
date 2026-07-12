@@ -1,140 +1,152 @@
-# Judgments: Classification, Opposition, and Distribution
+# Суждения: классификация, противоположение, распределённость
 
-## 1. Basic Structure
+## 1. Строение суждения
 
-Every judgment (proposition) has:
-- **Subject (S)**: what is being talked about.
-- **Predicate (P)**: what is being said about the subject.
-- **Copula**: links S and P ("is" / "is not").
+Всякое суждение, выраженное в словах (предложение), состоит из:
+- **Подлежащее, субъект (S)** — то, о чём высказываются.
+- **Сказуемое, предикат (P)** — то, что высказывается о подлежащем.
+- **Связка (copula)** — соединяет S и P («есть» / «не есть»).
 
-## 2. Classification by Quantity and Quality
+## 2. Деление суждений по количеству и качеству
 
-| Type | Symbol | Formula | Example |
-|------|--------|---------|---------|
-| Universal Affirmative | **A** | All S are P | All humans are mortal. |
-| Particular Affirmative | **I** | Some S are P | Some metals are precious. |
-| Universal Negative | **E** | No S are P | No insect is vertebrate. |
-| Particular Negative | **O** | Some S are not P | Some humans are not wise. |
+| Вид | Символ | Формула | Пример |
+|-----|--------|---------|--------|
+| Общеутвердительное | **A** | Все S суть P | Все люди смертны. |
+| Частноутвердительное | **I** | Некоторые S суть P | Некоторые металлы драгоценны. |
+| Общеотрицательное | **E** | Ни одно S не есть P | Ни одно насекомое не есть позвоночное. |
+| Частноотрицательное | **O** | Некоторые S не суть P | Некоторые люди не суть мудры. |
 
-Mnemonic: **A**ffirmo (A, I), **n**ego (E, O) — vowels of the Latin verbs.
+Мнемоника: **a**ff**i**rmo — «утверждаю» (A, I), n**e**g**o** — «отрицаю» (E, O) — гласные латинских глаголов.
 
-## 3. Other Classifications
+## 3. Прочие деления
 
-By **relation between S and P**:
-- **Categorical**: unconditional assertion (S is P).
-- **Conditional (hypothetical)**: If A is B, then C is D.
-  - First part = ground (antecedens); second part = consequence (consequens).
-- **Disjunctive**: S is either A, or B, or C.
-  - Members must be exhaustive and mutually exclusive.
-- **Conditional-disjunctive (dilemma)**: combination of conditional and disjunctive premises.
+По **отношению между S и P**:
+- **Категорические**: безусловное утверждение (S есть P). Пример: «Земля вращается вокруг Солнца».
+- **Условные (гипотетические)**: если A есть B, то C есть D.
+  - Первое суждение — основание, предыдущее (antecedens); второе — следствие, последующее (consequens).
+  - Пример: «если дождь пойдёт, то почва будет мокрая».
+- **Разделительные**: S есть или A, или B, или C.
+  - Члены деления должны быть перечислены полностью и исключать друг друга.
+  - Пример: «треугольник есть или остроугольный, или тупоугольный, или прямоугольный».
+- **Условно-разделительные (дилемма и т.п.)**: соединение условных посылок с разделительной.
 
-By **modality**:
-- **Problematic**: possible (S is possibly P).
-- **Assertoric**: actual (S is P).
-- **Apodictic**: necessary (S must be P).
+По **модальности**:
+- **Проблематические**: возможность (S, вероятно, есть P). «Илиада есть, вероятно, продукт коллективного творчества».
+- **Ассерторические**: действительность (S есть P). «Киев стоит на Днепре».
+- **Аподиктические**: необходимость (S необходимо должно быть P). «Две прямые линии не могут замыкать пространства».
 
-## 4. Distribution of Terms
+## 4. Распределённость терминов
 
-A term is **distributed** if it is taken in its entire extension.
+Термин **распределён**, если он взят во всём объёме; не распределён — если в части объёма.
 
-| Judgment | Subject (S) | Predicate (P) |
-|----------|-------------|---------------|
-| A (All S are P) | Distributed | **Not distributed** |
-| E (No S are P) | Distributed | Distributed |
-| I (Some S are P) | Not distributed | Not distributed |
-| O (Some S are not P) | Not distributed | **Distributed** |
+| Суждение | Подлежащее (S) | Сказуемое (P) |
+|----------|----------------|---------------|
+| A (Все S суть P) | Распределено | **Не распределено** |
+| E (Ни одно S не есть P) | Распределено | Распределено |
+| I (Некоторые S суть P) | Не распределено | Не распределено |
+| O (Некоторые S не суть P) | Не распределено | **Распределено** |
 
-**Rule of thumb**: In negative judgments the predicate is distributed. In affirmative judgments the predicate is not distributed.
+**Практическое правило**: отрицательные суждения распределяют своё сказуемое, утвердительные — не распределяют. Распределённость подлежащего видна по словам «все», «ни один» (распределено) и «некоторые» (не распределено).
 
-## 5. The Logical Square (Opposition of Judgments)
+Исключение: если S и P — понятия равнозначащие («все квадраты суть равносторонние прямоугольники»), сказуемое суждения A взято во всём объёме.
+
+## 5. Логический квадрат (противоположение суждений)
 
 ```
-          A -------- E
-         / \        / \
-        /   \      /   \
-       I ----O----
+        A ---- противные ---- E
+        | \                 / |
+  под-  |   противоречащие   |  под-
+  чине- |   /             \  | чине-
+  ние   | /                 \| ние
+        I --- подпротивные -- O
 ```
 
-Relations:
-1. **Contradictories** (A—O, E—I): opposite in both quantity and quality.
-   - One must be true, one must be false. They cannot both be true or both false.
-   - If A is true → O is false, and vice versa.
-   - If E is true → I is false, and vice versa.
-2. **Contraries** (A—E): opposite in quality, both universal.
-   - Cannot both be true. Can both be false.
-   - If A is true → E is false. If E is true → A is false.
-   - But if A is false, E is undetermined; if E is false, A is undetermined.
-3. **Subalterns** (A—I, E—O): same quality, different quantity.
-   - Truth flows downward: if universal is true, particular is true.
-   - Falsity flows upward: if particular is false, universal is false.
-   - If A is true → I is true. If I is false → A is false.
-   - If E is true → O is true. If O is false → E is false.
-   - Reverse directions are **not** valid.
-4. **Subcontraries** (I—O): opposite in quality, both particular.
-   - Can both be true. Cannot both be false.
-   - If I is false → O is true. If O is false → I is true.
+Отношения:
+1. **Противоречащие** (contradictoriae; A—O, E—I): различны и по количеству, и по качеству.
+   - Одно необходимо истинно, другое — ложно. Не могут быть ни оба истинными, ни оба ложными.
+   - Если A истинно → O ложно, и наоборот.
+   - Если E истинно → I ложно, и наоборот.
+2. **Противные** (contrariae; A—E): оба общие, различны по качеству.
+   - Не могут быть оба истинными; могут быть оба ложными.
+   - Если A истинно → E ложно. Если E истинно → A ложно.
+   - Но при ложности A суждение E неопределённо; при ложности E суждение A неопределённо.
+3. **Подчинённые** (subalternae; A—I, E—O): одинаковы по качеству, различны по количеству.
+   - Истинность нисходит: если общее истинно, то истинно и частное.
+   - Ложность восходит: если частное ложно, то ложно и общее.
+   - Если A истинно → I истинно. Если I ложно → A ложно.
+   - Если E истинно → O истинно. Если O ложно → E ложно.
+   - Обратные направления **недействительны**.
+4. **Подпротивные** (subcontrariae; I—O): оба частные, различны по качеству.
+   - Могут быть оба истинными; не могут быть оба ложными.
+   - Если I ложно → O истинно. Если O ложно → I истинно.
 
-**Summary Table**
+Наибольшая (диаметральная) противоположность — между противными A и E; но опровергать общее суждение удобнее противоречащим: показать «некоторые книги не полезны» легче и надёжнее, чем «ни одна книга не полезна».
 
-| Given | A | E | I | O |
-|-------|---|---|---|---|
-| A true | — | E false | I true | O false |
-| E true | A false | — | I false | O true |
-| I true | A ? | E false | — | O ? |
-| O true | A false | E ? | I ? | — |
-| A false | — | E ? | I ? | O true |
-| E false | A ? | — | I true | O ? |
-| I false | A false | E true | — | O true |
-| O false | A true | E false | I true | — |
+**Сводная таблица истинности**
 
-("?" = undetermined)
+| Дано | A | E | I | O |
+|------|---|---|---|---|
+| A истинно | — | E ложно | I истинно | O ложно |
+| E истинно | A ложно | — | I ложно | O истинно |
+| I истинно | A ? | E ложно | — | O ? |
+| O истинно | A ложно | E ? | I ? | — |
+| A ложно | — | E ? | I ? | O истинно |
+| E ложно | A ? | — | I истинно | O ? |
+| I ложно | A ложно | E истинно | — | O истинно |
+| O ложно | A истинно | E ложно | I истинно | — |
 
-## 6. Immediate Inferences
+(«?» = неопределённо)
 
-### A. Obversion (Prevrashchenie)
-Change quality and negate the predicate; quantity stays the same.
+## 6. Непосредственные умозаключения
 
-| Original | Obverse |
-|----------|---------|
-| A: All S are P | E: No S are non-P |
-| E: No S are P | A: All S are non-P |
-| I: Some S are P | O: Some S are not non-P |
-| O: Some S are not P | I: Some S are non-P |
+### А. Превращение (obversio)
+Изменяется качество суждения, а сказуемое заменяется противоречащим (не-P); количество сохраняется, смысл не меняется.
 
-### B. Conversion (Obrazovanie)
-Swap S and P.
+| Исходное | Превращённое |
+|----------|--------------|
+| A: Все S суть P | E: Ни одно S не есть не-P |
+| E: Ни одно S не есть P | A: Все S суть не-P |
+| I: Некоторые S суть P | O: Некоторые S не суть не-P |
+| O: Некоторые S не суть P | I: Некоторые S суть не-P |
 
-- **A**: Convert by limitation → **I** (because P is undistributed in A).
-  - Exception: if S and P are equivalent (same extension), pure conversion to A is possible.
-- **E**: Pure conversion → **E**.
-- **I**: Pure conversion → **I**.
-- **O**: **Not convertible** (would require distributing P in conclusion while it was undistributed in premise).
+Пример: «Все металлы суть элементы» → «Ни один металл не есть не-элемент» (т.е. сложное тело).
 
-### C. Contraposition (Protivopostavlenie)
-Obvert, then convert.
+### Б. Обращение (conversio)
+Подлежащее и сказуемое меняются местами.
 
-| Original | Contraposition |
-|----------|----------------|
-| A: All S are P | E: No non-P are S |
-| E: No S are P | I: Some non-P are S |
-| O: Some S are not P | I: Some non-P are S |
-| I: Not applicable | — |
+- **A**: обращение с ограничением (conversio per accidens, per limitationem) → **I**, потому что P в A не распределено. «Все птицы суть животные» → «Некоторые животные суть птицы».
+  - Исключение: если S и P равнозначащи (одинаковый объём), возможно чистое обращение в A: «все обезьяны суть четверорукие» → «все четверорукие суть обезьяны».
+- **E**: чистое обращение (conversio simplex) → **E**.
+- **I**: чистое обращение → **I**.
+- **O**: **не обращается** — в выводе сказуемое было бы распределено, тогда как в посылке оно (как подлежащее частного суждения) не распределено.
 
-## Few-Shot Examples
+Практическая ценность: удерживает от незаконного чистого обращения A («все великие люди имеют большие черепа» ≠ «все большеголовые — великие люди»).
 
-**Example 1: Determine truth values**
-> "All birds can fly" is false. What follows?
-- A is false → O is true (contradictory). → "Some birds cannot fly" is true.
-- A is false → E is undetermined, I is undetermined.
+### В. Противопоставление (contrapositio)
+Сначала превращение, затем обращение превращённого суждения.
 
-**Example 2: Convert and check validity**
-> "No honest witness is bribed."
-- E-judgment. Pure conversion: "No bribed person is an honest witness." Valid.
+| Исходное | Противопоставление |
+|----------|--------------------|
+| A: Все S суть P | E: Ни одно не-P не есть S |
+| E: Ни одно S не есть P | I: Некоторые не-P суть S |
+| O: Некоторые S не суть P | I: Некоторые не-P суть S |
+| I: Некоторые S суть P | — (не допускает противопоставления) |
 
-**Example 3: Obvert**
-> "Some metals are precious."
-- I → O: "Some metals are not non-precious."
+## Примеры разбора
 
-**Example 4: Dilemma check**
-> "If a pupil loves study, he needs no reward; if he feels aversion, reward is useless. But a pupil either loves study or feels aversion. Therefore reward is either superfluous or useless."
-- Analysis: The disjunctive premise is not exhaustive. A pupil may be indifferent (neither love nor aversion). Therefore the dilemma is false.
+**Пример 1. Определить истинностные значения**
+> Суждение «Все птицы летают» ложно. Что из этого следует?
+- A ложно → O истинно (противоречащее). → «Некоторые птицы не летают» — истинно.
+- A ложно → E неопределённо, I неопределённо.
+
+**Пример 2. Обратить и проверить правильность**
+> «Ни один честный свидетель не подкуплен».
+- Суждение E. Чистое обращение: «Ни один подкупленный человек не есть честный свидетель». Правильно.
+
+**Пример 3. Превратить**
+> «Некоторые металлы драгоценны».
+- I → O: «Некоторые металлы не суть недрагоценны».
+
+**Пример 4. Проверка дилеммы**
+> «Если ученик любит учение, награда не нужна; если чувствует отвращение — награда бесполезна. Но ученик или любит учение, или чувствует отвращение. Следовательно, награда либо излишня, либо бесполезна».
+- Разбор: разделительная посылка не полна — члены деления не исчерпывают всех случаев. Ученик может быть равнодушен (ни любви, ни отвращения). Следовательно, дилемма ложна.

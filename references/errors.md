@@ -1,125 +1,145 @@
-# Logical Errors and Fallacies
+# Логические ошибки и софизмы
 
-## 1. Two Broad Classes
+## 1. Два класса ошибок
 
-1. **Logical errors proper**: flaw in the reasoning process (form or content).
-2. **Errors of verbal expression**: flaw in how the thought is expressed (homonymy, ambiguity).
+1. **Ошибки логические в собственном смысле** — неправильность самого логического процесса (формы или содержания рассуждения).
+2. **Ошибки словесного выражения** — неправильность в выражении мысли словами.
 
-## 2. Errors Related to the Thesis
+Главная ошибка второго класса — **homonymia (омонимия)**: одно и то же слово употребляется в разных значениях, и понятия смешиваются из-за смешения слов.
 
-### Ignoratio elenchi (Missing the point)
-Proving something other than the required thesis.
+- Пример: смешение «материализма» философского с «материализмом» практическим, житейским.
+- Современный пример: в споре о «свободе слова» одна сторона говорит о юридическом праве, другая — об отсутствии любых последствий за сказанное; спор идёт о разных понятиях под одним словом.
 
-- Example: Proving that an act is legally unfair when the thesis requires proving it is morally unfair.
-- Example: Proving that others committed the same crime and escaped punishment to show the accused is innocent (metabasis eis allo genos — shift to another genus).
+Ошибки первого класса удобно распределять по частям доказательства: тезис, основания (аргументы), форма доказательства.
 
-### Qui nimium probat, nihil probat (Proving too much or too little)
-- **Too little**: The premises support only part of the thesis.
-  - Example: Proving someone is virtuous by showing nothing bad is known about him (absence of evidence ≠ evidence of virtue).
-- **Too much**: The premises, if true, would also prove a false conclusion.
-  - Example: Arguing suicide is forbidden because one cannot take away what one did not give oneself. This would also forbid cutting nails or selling an inheritance — absurd.
+## 2. Ошибки по отношению к тезису
 
-### Argumentum ad hominem
-Attacking the person instead of the argument.
+### Подмена тезиса (ignoratio elenchi)
+Доказывается не то, что требовалось доказать, а нечто иное, хотя и сходное.
 
-- Example: Rejecting a scientific theory by pointing out the author's unpopular political views.
+- Пример: нужно доказать, что поступок несправедлив в моральном смысле, а доказывают, что он несправедлив в юридическом смысле.
+- Пример: невиновность обвиняемого «доказывают» тем, что другие совершили то же преступление и избегли наказания — это переход в другой род (μετάβασις εἰς ἄλλο γένος).
+- Современный пример: на упрёк «это приложение сливает данные пользователей» разработчик отвечает: «наше приложение скачали десять миллионов человек» — доказывается популярность, а не безопасность.
 
-## 3. Errors Related to the Grounds (Arguments)
+### «Кто слишком много доказывает, тот ничего не доказывает» (qui nimium probat, nihil probat)
+- **Доказывается слишком мало**: основания покрывают лишь часть тезиса.
+  - Пример: доказывать добродетельность человека тем, что о нём не известно ничего дурного, — значит доказать слишком мало.
+- **Доказывается слишком много**: из оснований следует не только тезис, но и заведомо ложное положение.
+  - Пример: «самоубийство недозволительно, потому что человек не может отнимать у себя то, чего сам себе не дал». Но тогда нельзя стричь ногти и волосы, нельзя продавать унаследованное — вывод нелепый, значит, тезис не доказан.
+  - Современный пример: «нельзя доверять Википедии, потому что её может править кто угодно». Тем же аргументом пришлось бы отвергнуть любой открытый проект, включая программы, на которых работает интернет.
 
-### Error fundamentalis (Fundamental error)
-The basic premise itself is false.
+### Argumentum ad hominem («аргумент к человеку»)
+Вместо разбора мнения разбирают личность того, кто его высказал. Логически самое слабое доказательство, фактически пользующееся большим успехом.
 
-- Example: Geocentrism as the foundation of pre-Copernican astronomy.
+- Пример: несостоятельность научной теории «доказывают», раскрывая принадлежность автора к несимпатичному политическому направлению.
+- Современный пример: «что этот блогер понимает в экономике — посмотрите, на какой машине он ездит».
 
-### Petitio principii (Begging the question)
-Using the thesis itself as a premise, or a premise that presupposes the thesis.
+## 3. Ошибки по отношению к основаниям (аргументам)
 
-- Example: "All matter particles have the same weight because in equal volumes, the heavier body contains more particles, which is obvious if all particles have the same weight."
+### Основная ошибка (error fundamentalis)
+Ложное основное положение, на котором строится всё доказательство и из которого делаются дальнейшие выводы.
 
-### Idem per idem (Explaining by the same thing)
-Using the concept itself in its own explanation.
+- Пример: до Коперника основной ошибкой астрономических рассуждений было положение, что Солнце и звёзды вращаются вокруг Земли.
 
-- Example: "Why can we see through glass? Because it is transparent." (Transparent = can be seen through.)
+### Предвосхищение основания (petitio principii)
+В основу доказательства кладётся положение, которое само предполагает истинность доказываемого тезиса.
 
-### Circulus in demonstrando (Circular reasoning)
-Thesis A is proved by B, and B is proved by A.
+- Пример: «Все частички материи имеют один и тот же вес, потому что из двух тел одинакового объёма тяжелее то, в котором больше частичек. А что больший вес зависит от числа частичек, очевидно, — если принять, что все частички весят одинаково». Тезис принят за истинный в самом основании.
 
-- Example: "This writer is trustworthy because he is truthful. How do we know he is truthful? Because his writings prove it."
+### То же посредством того же (idem per idem)
+Положение доказывается посредством этого же самого положения, лишь иначе выраженного.
 
-### A dicto secundum quid ad dictum simpliciter
-Taking a statement that is true only under certain conditions as universally true.
+- Пример: «Почему мы видим сквозь стекло? Потому что оно прозрачно». Но назвать вещество прозрачным — и значит сказать, что сквозь него видно.
 
-- Example: "Arsenic, strychnine, and prussic acid cause death when taken in large quantities. Therefore they always cause death." (False: in tiny doses they are medicines.)
+### Круг в доказательстве (circulus in demonstrando)
+Тезис A доказывается аргументом B, а аргумент B, в свою очередь, доказывается посредством A.
 
-### Fallacia a sensu composito ad sensum divisum (Composition)
-What is true of the parts is assumed true of the whole.
+- Пример: «Сочинения этого писателя заслуживают доверия, потому что он правдив. — Откуда известно, что он правдив? — Это доказывается содержанием его сочинений».
+- Современный пример: «Этому каналу можно верить, он публикует только проверенное. — Кто это проверил? — Сам канал об этом и сообщил».
 
-- Example: "Each of my expenses is small; therefore all my expenses together are small." (Each symptom is non-fatal; therefore the disease is non-fatal.)
+### От сказанного с ограничением к сказанному безусловно (a dicto secundum quid ad dictum simpliciter)
+Выражение, истинное лишь в условном, относительном смысле, принимается в смысле безусловном.
 
-### Fallacia a sensu diviso ad sensum compositum (Division)
-What is true of the whole is assumed true of each part.
+- Пример: мышьяк, стрихнин и синильная кислота причиняют смерть, будучи введены в организм в значительном количестве. Сказать, что они причиняют смерть всегда, — ошибка: в малых дозах они служат лекарствами.
+- Современный пример: «учёные доказали, что кофе вреден» — из исследования о больших дозах у людей с гипертонией реклама и заголовки отбрасывают все условия.
 
-- Example: "Society adopted a reprehensible decision; therefore every member of society is reprehensible." (Some members may have voted against it.)
+### От смысла собирательного к смыслу разделительному (fallacia a sensu composito ad sensum divisum)
+То, что справедливо о собирательном целом, переносится на каждую его часть; собирательный термин смешивается с общим.
 
-## 4. Errors of Induction
+- Пример: общество, в котором я состою, приняло решение, заслуживающее порицания. Упрекать за это меня лично — ошибка: я мог голосовать против.
+- Современный пример: «эта компания загрязняет реку, значит, каждый её сотрудник — отравитель природы».
 
-### Hasty generalization (fallacia fictae universalitatis)
-Drawing a universal conclusion from insufficient observation.
+### От смысла разделительного к смыслу собирательному (fallacia a sensu diviso ad sensum compositum)
+То, что справедливо о каждой части в отдельности, переносится на целое.
 
-- Example: "Greeks are liars" after brief contact.
-- Example: "Women are intellectually inferior to men" based on historical conditions that excluded women from education.
+- Пример: «Этот расход меня не разорит, и этот не разорит…» — но все расходы вместе могут разорить.
+- Пример: больной находит, что каждый симптом в отдельности не смертелен, и заключает, что болезнь не смертельна; между тем все симптомы вместе могут быть смертельны.
 
-### Post hoc ergo propter hoc / Non causa pro causa
-Assuming that because B follows A, A caused B.
+## 4. Ошибки индукции
 
-- Example: Comets were blamed for subsequent misfortunes.
-- Example: A new form of government is blamed for events whose true causes lie in the society's level of development.
+### Поспешное обобщение (fallacia fictae universalitatis)
+Общий вывод делается из недостаточного числа наблюдений.
 
-### One-sided enumeration (biased sampling)
-Remembering confirming cases and forgetting disconfirming ones.
+- Пример: путешественники после поверхностного знакомства с народом произносят: «греки лживы», «турки жестоки».
+- Пример: «женщина вообще ниже мужчины умом» — положение эмпирическое, справедливое лишь для тех времён и условий, когда женщины были отстранены от образования.
+- Современный пример: два грубых комментария под постом — и вывод: «в этом городе живут одни хамы».
 
-- Example: A calendar once predicted an event correctly; people ignore thousands of failed predictions and believe the calendar is prophetic.
+### Post hoc ergo propter hoc / non causa pro causa
+«После этого — значит, по причине этого»: событие, предшествовавшее другому, принимается за его причину; за причину принимается то, что причиной не является.
 
-### False analogy
-Inferring similarity in unknown properties from superficial similarity.
+- Пример: после появления кометы случались несчастья — комету считали их причиной.
+- Пример: события после введения новой формы правления приписывают ей, тогда как истинные причины лежат в степени умственного и нравственного развития общества.
+- Современный пример: «после установки нового обновления телефон стал медленнее — обновление всё сломало» (батарея могла деградировать и без него).
 
-- Example: "Ants have slaves, warriors, and domestic animals, just like human societies." (The social structures are not truly analogous.)
+### Одностороннее перечисление (предвзятый отбор случаев)
+Запоминаются случаи, подтверждающие положение, и забываются опровергающие. Сюда же относится индукция по простому перечислению: «так было до сих пор, значит, так будет всегда».
 
-## 5. Sophisms vs. Paralogisms
+- Пример: предсказание календаря один раз сбылось — и люди верят календарю, упуская из виду тысячу случаев, когда предсказания не сбывались. На этом основана вера в предсказателей и шарлатанов.
+- Пример: «война всегда будет между народами, потому что до сих пор она всегда была».
+- Современный пример: гороскоп «сбывается», потому что читатель помнит совпадения и забывает промахи; лента соцсети подсовывает лишь подтверждающие примеры.
 
-- **Paralogism**: an unintentional logical error.
-- **Sophism**: a deliberate logical trick intended to deceive.
+### Ложная аналогия
+Из поверхностного сходства заключают о сходстве в существенных, неизвестных свойствах.
 
-### Classic Sophisms
+- Пример: политические тела, подобно организмам, будто бы переживают юность, зрелость, старость и смерть.
+- Пример: утверждение, будто у муравьёв есть рабы, воины и домашние животные, как в человеческом обществе.
+- Современный пример: «государственный бюджет — как семейный: нельзя тратить больше, чем зарабатываешь» — экономика государства устроена принципиально иначе.
 
-1. **The Liar**: "A liar admits he is a liar. Then he tells the truth. But one who tells the truth is not a liar. Therefore a liar is not a liar."
-   - Error: Equivocation on the meaning of "liar" (occasional admission vs. habitual character).
+## 5. Софизмы и паралогизмы
 
-2. **The Horned One**: "What you have not lost, you possess. You have not lost horns. Therefore you possess horns."
-   - Error: Equivocation on "have not lost" (never had vs. still retain).
+- **Паралогизм** — логическая ошибка, совершаемая непреднамеренно.
+- **Софизм** — ошибка преднамеренная, совершаемая для того, чтобы ввести кого-либо в заблуждение.
 
-3. **The Heap (Sorites)**: Removing one grain from a heap leaves a heap. Repeating until one grain remains implies one grain is a heap.
-   - Error: Abuse of vague terms; "heap" has no precise boundary.
+### Классические софизмы
 
-4. **Euathlus vs. Protagoras**: Euathlus took lessons on the condition he would pay only if he won his first court case. He took no cases. Protagoras sued.
-   - Protagoras: "If I win, you must pay by court order. If you win, you must pay by contract (you won your first case)."
-   - Euathlus: "If I win, I don't pay by court order. If you win, I don't pay by contract (I lost my first case)."
-   - Error: Confusing two separate questions: (1) whether Euathlus must pay, and (2) whether the contract's condition is fulfilled.
+1. **«Лжец»**. Лжец сознаётся, что он лжец. В таком случае он говорит правду. Но говорящий правду не есть лжец. Следовательно, лжец — не лжец.
+   - Ошибка: омонимия слова «лжец» — единичное правдивое признание смешивается с постоянным свойством характера.
 
-## Few-Shot Examples
+2. **«Рогатый»**. То, чего ты не потерял, ты имеешь. Ты не потерял рогов. Следовательно, ты имеешь рога.
+   - Ошибка: двусмысленность оборота «не потерял» — «никогда не имел» смешивается с «имел и сохранил».
 
-**Example 1: Identify the fallacy**
-> "You should trust my report because I am honest. You know I am honest because my report says so."
-- Circulus in demonstrando.
+3. **«Куча»**. Куча песку, из которой взяли одну песчинку, остаётся кучей. И ещё одну — остаётся. Продолжая отнимать по песчинке, придём к тому, что и одна песчинка — куча.
+   - Ошибка: злоупотребление неопределённым термином — у «кучи» нет точной границы.
 
-**Example 2: Identify the fallacy**
-> "This society made a bad decision, so you (a member) are guilty."
-- Fallacia a sensu composito ad sensum divisum (composition/division confusion with collective terms).
+4. **«Эватл и Протагор»**. Эватл учился у Протагора с условием уплатить гонорар, лишь если выиграет свой первый процесс. Процессов он не вёл; Протагор подал в суд.
+   - Протагор: «Присудят тебя к уплате — заплатишь по приговору; не присудят — заплатишь по договору, ибо выиграешь первый процесс».
+   - Эватл: «Присудят — не заплачу по договору, ибо проиграю первый процесс; не присудят — не заплачу по приговору суда».
+   - Ошибка: смешаны два разных вопроса: 1) должен ли Эватл платить и 2) выполнено ли условие договора.
 
-**Example 3: Identify the fallacy**
-> "Ever since we installed the new software, sales dropped. The software caused the drop."
-- Post hoc ergo propter hoc. Correlation does not prove causation; other factors may be at play.
+## Примеры разбора
 
-**Example 4: Identify the fallacy**
-> "This medicine cures fever in most patients. Therefore it will cure this patient's fever."
-- Approximate generalization applied to an individual without qualification. Not a formal fallacy, but a probabilistic inference that may fail.
+**Пример 1. Назовите ошибку**
+> «Моему отчёту следует доверять, потому что я честен. А что я честен, видно из моего отчёта».
+- Круг в доказательстве (circulus in demonstrando).
+
+**Пример 2. Назовите ошибку**
+> «Это общество приняло дурное решение, значит, и ты, его член, виновен».
+- От смысла собирательного к смыслу разделительному (fallacia a sensu composito ad sensum divisum): собирательный термин смешан с общим.
+
+**Пример 3. Назовите ошибку**
+> «С тех пор как мы установили новую программу, продажи упали. Значит, программа — причина падения».
+- Post hoc ergo propter hoc. Последовательность во времени не доказывает причинной связи; могли действовать иные причины.
+
+**Пример 4. Назовите ошибку**
+> «Это лекарство излечивает лихорадку у большинства больных. Следовательно, оно излечит лихорадку и у этого больного».
+- Приблизительное обобщение без оговорки перенесено на отдельный случай. Это не формальная ошибка, а вероятностный вывод, который может не оправдаться.

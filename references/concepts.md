@@ -1,122 +1,132 @@
-# Concepts, Definitions, and Division
+# Понятия: классификация, определение, деление
 
-## 1. Kinds of Terms (Concepts)
+## 1. Классы понятий (терминов)
 
-| Classification | Description | Examples |
-|----------------|-------------|----------|
-| **Individual vs. General** | Individual: refers to a single thing. General: refers to a class. | Individual: "Mount Everest", "Newton". General: "mountain", "scientist". |
-| **Collective vs. Distributive** | Collective: denotes a whole made of homogeneous units (what is true of the whole may not be true of each part). Distributive: the assertion applies to every member. | Collective: "forest", "regiment". Distributive: "all trees", "all soldiers". |
-| **Concrete vs. Abstract** | Concrete: denotes a thing with definite existence. Abstract: denotes a quality, property, or action considered apart from things. | Concrete: "white", "stone". Abstract: "whiteness", "heaviness". |
-| **Positive vs. Negative** | Positive: asserts presence of a quality. Negative: asserts absence. | Positive: "beautiful", "finite". Negative: "not beautiful", "infinite". |
-| **Relative vs. Absolute** | Relative: implies another term. Absolute: does not. | Relative: "parent" (implies child), "cause" (implies effect). Absolute: "house", "stone". |
+| Классификация | Описание | Примеры |
+|---------------|----------|---------|
+| **Индивидуальные и общие** | Индивидуальное (единичное): относится к одному предмету. Общее (классовое): относится к классу сходных предметов. | Индивидуальные: «Казбек», «Ньютон», «автор „Мёртвых душ“». Общие: «гора», «учёный», «растение». |
+| **Собирательные и разделительные** | Собирательный термин обозначает целое из однородных единиц: сказанное о целом может быть неприложимо к каждой единице. При разделительном употреблении утверждение относится к каждому члену группы в отдельности. | Собирательные: «лес», «полк», «парламент» («весь флот погиб» — отдельные корабли могли уцелеть). Разделительно: «все рабочие утомились» — каждый в отдельности. |
+| **Конкретные и абстрактные** | Конкретное обозначает вещь, предмет, событие с определённым существованием. Абстрактное — качество, свойство, состояние, мыслимое отдельно от вещей. | Конкретные: «белый», «камень», «дом». Абстрактные: «белизна», «тяжесть», «строгость». Прилагательные всегда конкретны. |
+| **Положительные и отрицательные** | Положительный термин обозначает наличность качества, отрицательный — его отсутствие. | Положительные: «красивый», «конечный». Отрицательные: «некрасивый», «бесконечный», «беспечный». |
+| **Относительные и абсолютные** | Относительный термин предполагает существование другого предмета (соотносительного). Абсолютный — нет. | Относительные: «родители» (предполагают детей), «причина» (предполагает действие). Абсолютные: «дом», «камень». |
 
-## 2. Content and Extension of Concepts
+## 2. Содержание и объём понятия
 
-- **Content (intension)**: the sum of attributes thought in the concept.
-- **Extension**: the sum of things to which the concept applies.
+- **Содержание** — совокупность признаков, мыслимых в понятии.
+- **Объём** — совокупность предметов (классов, видов), к которым понятие приложимо.
 
-**Inverse relation**: As content increases, extension decreases, and vice versa.
+**Обратное отношение**: по мере увеличения содержания понятия уменьшается его объём, и наоборот.
 
-Example:
-- "Human" — broad extension (all humans), limited content.
-- "Black human" — narrower extension, richer content (adds skin color).
+Пример:
+- «Человек» — обширный объём (все люди), сравнительно бедное содержание.
+- «Чёрный человек» — объём уже, содержание богаче (прибавлен цвет кожи и связанные признаки).
 
-## 3. Five Classes of Attributes (Aristotelian)
+Сопутствующие термины:
+- **Род** — понятие с большим объёмом, в которое входит вид; любой вид может стать родом для своих видов («пальма» — вид дерева и род для «кокосовой пальмы»).
+- **Summum genus** — высший род (уже не вид ничего); **infima species** — низший вид (делится только на индивидуумы); **genus proximum** — ближайший род данного вида (дерево Порфирия).
+- **Ограничение** (determinatio) — образование менее общего понятия прибавлением признаков; **обобщение** (generalisatio) — обратный процесс отбрасывания признаков.
 
-1. **Genus (generic attribute)**: the wider class to which the concept belongs.
-   - Example: For "chemistry", genus is "science".
-2. **Specific difference**: what distinguishes the concept from others in the same genus.
-   - Example: "studies the composition of substances" distinguishes chemistry from other sciences.
-3. **Species**: the concept formed by genus + specific difference.
-   - Example: "Arsenal" = building (genus) + for storing weapons (difference).
-4. **Proprium (proper attribute)**: belongs to all members of the class, is not essential, but is deducible from essential attributes.
-   - Example: "Ability to speak" is a proprium of humans (derived from rationality).
-5. **Accidens (non-essential attribute)**: neither essential nor deducible; may or may not belong.
-   - Inseparable accidens: black color of a raven.
-   - Separable accidens: black hair of a human.
+## 3. Пять классов признаков (по Аристотелю)
 
-## 4. Relations Between Concepts
+1. **Родовой признак (род, genus)**: понятие класса, в который вводится рассматриваемое понятие.
+   - Пример: для «химии» род — «наука».
+2. **Видовое различие** (differentia specifica): признак, выделяющий понятие из ряда подобных в том же роде.
+   - Пример: «занимающаяся изучением строения вещества» отличает химию от прочих наук.
+3. **Вид** (species): род + видовое различие.
+   - Пример: «арсенал» = здание (род) + для хранения оружия (видовое различие).
+4. **Собственный признак** (proprium): присущ всем вещам класса, не входит в существенные признаки, но выводится из них.
+   - Пример: способность владеть речью — proprium человека (вытекает из разумности); сумма углов треугольника равна двум прямым — proprium треугольника.
+5. **Несобственный признак** (accidens): не выводится из существенных признаков; может быть присущ всем или лишь некоторым вещам класса.
+   - Неотделимый (accidens inseparabile): чёрный цвет ворона.
+   - Отделимый (accidens separabile): чёрный цвет волос у человека.
 
-- **Subordination**: one concept is a species of another (smaller circle inside larger).
-- **Coordination**: two or more species under the same genus.
-- **Equivalents (equipollent)**: same extension, different content.
-  - Example: "English nation" and "first seafaring people in the world".
-- **Contrary (contrariae)**: extremes within the same genus (white — black in the genus of colors).
-- **Contradictory (contradictoriae)**: A and not-A (white — non-white).
-  - **Critical distinction**: Contradictory terms have indefinite, vast content (non-white can be red, green, heavy, etc.). Contrary terms have definite content.
-- **Crossing (intersecting)**: partial overlap of extensions.
-  - Example: "writers" and "scientists".
-- **Incomparable (disparatae)**: no immediate genus linking them.
-  - Example: "soul" and "triangle".
+## 4. Отношения между понятиями
 
-## 5. Definition
+- **Подчинение** (subordinatio): одно понятие входит в объём другого как вид в род («берёза» — «дерево»).
+- **Соподчинение** (coordinatio): два и более вида под одним родом («мужество» и «умеренность» в роде «добродетель»).
+- **Равнозначащие** (aequipollentes): одинаковый объём при различном содержании.
+  - Пример: «английский народ» и «первые мореплаватели в мире».
+- **Противные** (contrariae): крайние члены ряда видов одного рода («белый» — «чёрный» в роде цветов). Не всякое понятие имеет противное (у «голубого» его нет).
+- **Противоречащие** (contradictoriae): A и не-A («белый» — «небелый»).
+  - **Ключевое различие**: у противоречащего понятия содержание неопределённо («небелый» — это и красный, и зелёный, и даже большой или добрый); у противного — вполне определённо («чёрный»).
+- **Скрещивающиеся**: объёмы частично совпадают при различном содержании.
+  - Пример: «писатели» и «учёные»; «прямоугольные фигуры» и «параллелограммы».
+- **Несравнимые** (disparatae): нет ближайшего общего рода, нет tertium comparationis.
+  - Пример: «душа» и «треугольник». (У «корабля» и «чернильницы» общее есть — «вещь», — но нет ближайшего рода.)
 
-**Formula**: Definition = proximate genus + specific difference.
+## 5. Определение
 
-Example: "A rectangle is a parallelogram with right angles."
+**Формула**: определение совершается через ближайший род и видовое различие (definitio fit per genus proximum et differentiam specificam). Определяемое — definiendum, определяющее — definiens.
 
-### Rules of Correct Definition
+Пример: «Прямоугольник есть параллелограмм, в котором все углы прямые».
 
-1. **Adequate (commensurate)**: extension of definiens must equal extension of definiendum.
-   - Too broad: "A horse is a domestic animal" (includes cows, dogs).
-   - Too narrow: "A triangle is a plane figure with three equal sides" (excludes scalene).
-2. **No circle**: definiens must not contain the definiendum or depend on it.
-   - Bad: "Rotation is movement around an axis" (axis is defined through rotation).
-   - Bad (tautology): "Light is what possesses light."
-3. **Not negative**: a definition must state what the thing IS, not what it is NOT.
-   - Exception: when the concept itself is negative (e.g., "foreigner = a person not belonging to this country").
-4. **Clear**: no metaphors, ambiguities, or obscure expressions.
-   - Bad: "Architecture is frozen music."
+Не определяются: простые понятия («пунцовый цвет», «равенство», «сознание» — содержание не раскрывается) и индивидуальные понятия («этот бриллиант» — признаков бесконечно много).
 
-### Substitutes for Definition
+### Правила правильного определения
 
-When definition is impossible (simple concepts, individual concepts, sensory qualities), use:
+1. **Соразмерность**: объёмы определяемого и определяющего должны быть тождественны.
+   - Слишком широко: «лошадь есть домашнее животное» (подходит и корова, и собака).
+   - Слишком узко: «треугольник есть плоская прямолинейная фигура с тремя равными сторонами» (исключает разносторонние).
+2. **Без круга**: определяющее не должно само определяться через определяемое.
+   - Плохо: «вращение есть движение вокруг оси» (ось определяется через вращение).
+   - Тавтология (idem per idem): «свет есть то, чему присущ свет»; «величина есть то, что способно увеличиваться и уменьшаться».
+3. **Не отрицательное**: определение должно указывать, что предмет ЕСТЬ, а не чем он не является.
+   - Плохо: «театр есть здание, не служащее для жилья».
+   - Исключение: понятия с отрицательным характером («чужестранец — человек, не принадлежащий к данной стране»).
+4. **Ясность**: без метафор, двусмысленностей и объяснения непонятного через ещё менее понятное (ignotum per ignotius).
+   - Плохо: «архитектура есть застывшая музыка»; «эксцентричность есть своеобразная идиосинкразия».
 
-1. **Indication (ostension)**: point to the object.
-2. **Description**: enumerate observable attributes (used for individuals).
-3. **Characterization**: highlight outstanding, salient features.
-4. **Comparison**: explain via a more familiar analogous concept.
-5. **Distinction**: clarify by contrasting with a similar concept.
+### Приёмы, заменяющие определение
 
-## 6. Division
+Когда определение невозможно (простые, индивидуальные понятия, чувственные качества):
 
-**Purpose**: reveal the extension of a concept by listing its species.
+1. **Указание**: привести в непосредственное восприятие предмета (цвет, звук).
+2. **Описание**: возможно полное перечисление признаков индивидуального предмета (описание Днепра у Гоголя).
+3. **Характеристика**: выделение выдающихся, характерных признаков (для воина — мужество, для врача — гуманность).
+4. **Сравнение**: уяснение через сходное, более знакомое понятие («теплопроводность для тепловых лучей — то же, что прозрачность для световых»).
+5. **Различение**: уяснение через отличие от сходного понятия («энтузиазм» отличается от «фанатизма» благородством предмета и умеренностью).
 
-- **Dividend**: the concept being divided.
-- **Members**: the resulting species.
-- **Basis (fundamentum)**: the attribute by which division is made.
+## 6. Деление
 
-### Dichotomy
+**Задача**: раскрыть объём понятия, перечислив его виды (определение раскрывает содержание, деление — объём).
 
-Divide into A and not-A. Advantage: exhaustive. Disadvantage: one member remains indefinite.
+- **Делимое** (totum dividendum): понятие, объём которого раскрывается.
+- **Члены деления** (membra divisionis): получаемые виды.
+- **Основание деления** (fundamentum divisionis): признак, по которому производится деление.
 
-Example: Humans → Slavs / non-Slavs; non-Slavs → Germanic / non-Germanic.
+Пример: треугольник по величине углов → остроугольный, прямоугольный, тупоугольный; тот же род по отношению сторон → равносторонний, равнобедренный, разносторонний. Деление видов на подвиды называется **подразделением**; при подразделении основание обязательно меняется (остроугольные → равносторонние, равнобедренные, разносторонние).
 
-### Rules of Correct Division
+### Дихотомия
 
-1. **Adequate**: sum of members must equal the dividend exactly.
-   - Incomplete: Triangle → acute, obtuse (misses right).
-   - Too broad: Tree → oak, spruce, violet (violet is not a tree).
-2. **Members must exclude each other**.
-   - Bad: Books → French, German, dictionaries (a book can be French AND a dictionary).
-3. **One basis at a time**.
-   - Bad: Peoples of Europe → Muslims, Christians, French, Germans (mixes religion and nationality).
-4. **Continuous (no leaps)**: proceed to the nearest lower genus.
-   - Bad: Nature → animals, plants, minerals (leap; should insert organic / inorganic worlds).
+Деление понятия A на противоречащие члены B и не-B. Преимущество: деление исчерпывающее (любой новый вид попадёт в отрицательный член). Недостаток: отрицательный член остаётся неопределённым.
 
-## Few-Shot Examples
+Пример: человек → славянин / не-славянин; не-славянин → германец / не-германец, и т.д.
 
-**Example 1: Check a definition**
-> "A circle is a figure with no angles."
-- Analysis: Negative definition. Also too broad (ellipse, parabola have no angles).
-- Verdict: violates rules 1 and 3.
+### Правила правильного деления
 
-**Example 2: Check a division**
-> "Triangles: equilateral, isosceles, right."
-- Analysis: Basis not uniform. Equilateral/isosceles by side relation; right by angle. Also, right triangle can be isosceles (members overlap).
-- Verdict: violates rules 2 and 3.
+1. **Соразмерность (адекватность)**: сумма членов деления должна равняться делимому.
+   - Неполное: треугольники → остроугольные, тупоугольные (пропущены прямоугольные); люди → порочные и добродетельные (пропущены промежуточные ступени).
+   - Слишком обширное: деревья → дуб, ель, фиалка (фиалка — не дерево).
+2. **Члены деления должны исключать друг друга**.
+   - Плохо: книги → французские, немецкие, словари (книга может быть и французской, и словарём).
+3. **Одно основание деления** (при первом делении; при подразделении основание меняется).
+   - Плохо: народы Европы → магометане, христиане, французы, немцы (смешаны религия и национальность). Такое деление называется перекрёстным.
+4. **Непрерывность (без скачков)**: переходить к ближайшему низшему роду.
+   - Плохо: природа → животные, растения, минералы (скачок; надо вставить «мир органический» и «мир неорганический»).
 
-**Example 3: Classify terms**
-> "Army"
-- General term (refers to many armies) but also collective (an army is a whole of soldiers).
-- Context determines usage.
+## Примеры разбора
+
+**Пример 1: проверка определения**
+> «Круг есть фигура без углов».
+- Разбор: определение отрицательное — не указывает, что круг есть. К тому же слишком широкое: без углов также эллипс, парабола.
+- Вывод: нарушены правила 1 (соразмерность) и 3 (не отрицательное).
+
+**Пример 2: проверка деления**
+> «Треугольники: равносторонние, равнобедренные, прямоугольные».
+- Разбор: смешаны основания деления — первые два члена выделены по отношению сторон, третий по величине углов. Члены не исключают друг друга: прямоугольный треугольник может быть равнобедренным.
+- Вывод: нарушены правила 2 и 3.
+
+**Пример 3: классификация термина**
+> «Полк».
+- Общий термин, когда речь о полках как классе («полкам принадлежит войсковое знамя»), и собирательный, когда полк мыслится как целое из однородных единиц («полк перешёл реку» — не каждый солдат по отдельности).
+- Употребление определяется контекстом.
