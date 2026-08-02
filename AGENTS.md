@@ -53,6 +53,8 @@ When you bump the version, update it in **all** of these:
 - `.cursor-plugin/plugin.json`
 - `.codex-plugin/plugin.json`
 
+Then mirror the new number into the `rpa-skills` catalog - see section 4.
+
 ### 3. `description` must stay consistent across manifests
 
 The `description` in `SKILL.md` is Russian (it drives auto-triggering for Russian users); the three
@@ -63,6 +65,33 @@ Quick check that the version is identical everywhere:
 
 ```bash
 grep -RhoE '"version"\s*:\s*"[^"]+"' .claude-plugin .cursor-plugin .codex-plugin | sort -u
+```
+
+### 4. Every version bump must be mirrored into the `rpa-skills` catalog
+
+This skill is published through the **[rpa-skills](https://github.com/EvilFreelancer/rpa-skills)** marketplace,
+which keeps its **own copy** of this skill's `version` and `description`. Until the catalog is updated, anyone
+installing from the marketplace still gets the old metadata. The catalog **follows, never leads** - release
+here first, then update it in the same session. The full process lives in that repo's `AGENTS.md`.
+
+**MANDATORY** whenever `version` or `description` changes here:
+
+1. `.claude-plugin/marketplace.json` (catalog) - in the `logika` entry set `version` to the new number and
+   refresh `description` if it changed.
+2. `.agents/plugins/marketplace.json` (catalog, Codex) - no per-plugin `version` there; the entry points at
+   `ref: main`, so the version follows by itself. Refresh `description` if it changed, and the `ref` only
+   when the entry pins a tag or a sha.
+3. Top-level `metadata.version` in **both** catalog manifests - bump the **patch** level on every mirrored
+   skill release (`2.2.0` -> `2.2.1`), and keep the two manifests identical. A skill added, removed, or
+   renamed is a bigger event and takes a minor bump instead.
+4. `README.md` (catalog) - the Skills-table row, only when the purpose or the description changed.
+
+Verify from a checkout of the catalog:
+
+```bash
+grep -A3 '"name": "logika"' .claude-plugin/marketplace.json
+python3 -m json.tool .claude-plugin/marketplace.json  >/dev/null && echo claude-ok
+python3 -m json.tool .agents/plugins/marketplace.json >/dev/null && echo codex-ok
 ```
 
 ## `SKILL.md` frontmatter
@@ -78,7 +107,7 @@ description: >
 ```
 
 - `name` **must** equal the directory name `logika` and the slash command (`/logika`).
-- Bump `version` on every substantive change.
+- Bump `version` on every substantive change, and mirror it into the `rpa-skills` catalog (section 4).
 
 ## README.md
 
@@ -97,6 +126,9 @@ before committing.
       `.cursor-plugin/plugin.json`, `.codex-plugin/plugin.json`.
 - [ ] `description` consistent across all manifests (and `interface.shortDescription` in Codex).
 - [ ] README updated.
+- [ ] Release mirrored into the `rpa-skills` catalog: plugin `version` and `description` in
+      `.claude-plugin/marketplace.json`, `description` in `.agents/plugins/marketplace.json`,
+      catalog `metadata.version` patch-bumped in both, README row when the description changed.
 - [ ] Conventional commit message, e.g. `feat(logika): …` / `fix(logika): …`.
 
 ---
