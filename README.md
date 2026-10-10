@@ -56,6 +56,14 @@ This skill is distributed through the **rpa-skills** catalog (a Claude Code plug
 /plugin install logika@rpa-skills
 ```
 
+**In Coddy**: the rpa-skills catalog is built into [Coddy](https://coddy.dev) as a system source,
+so there is nothing to connect. One sync installs this skill together with the rest of the collection
+into `~/.coddy/skills/logika/` and keeps it up to date (or press **Sync all** in Settings → Skills):
+
+```bash
+coddy skills sync
+```
+
 **As a plain skill folder** — copy or symlink this repository into a skill root (its `SKILL.md` lives at the repo root):
 
 | Tool          | Path                          |
@@ -64,6 +72,7 @@ This skill is distributed through the **rpa-skills** catalog (a Claude Code plug
 | Cursor        | `~/.cursor/skills/logika/`      |
 | OpenAI Codex  | `~/.codex/skills/logika/`       |
 | Kimi Code CLI | `~/.kimi/skills/logika/`        |
+| Coddy         | `~/.coddy/skills/logika/`       |
 
 The directory name must match the `name` field in `SKILL.md`.
 

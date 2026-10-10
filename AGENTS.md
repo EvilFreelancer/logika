@@ -8,7 +8,8 @@ or any plugin manifest.
 ## Repository layout
 
 This skill is packaged for **Claude Code**, **Cursor**, and **OpenAI Codex** (and installs as a plain
-skill folder for Kimi Code CLI and others).
+skill folder for Kimi Code CLI and others). **Coddy** installs it from the `rpa-skills` catalog,
+which Coddy has built in.
 
 ```
 logika/
