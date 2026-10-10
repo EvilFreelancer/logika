@@ -68,11 +68,11 @@ coddy skills sync
 
 | Tool          | Path                          |
 |---------------|-------------------------------|
+| Coddy         | `~/.coddy/skills/logika/`       |
 | Claude Code   | `~/.claude/skills/logika/`      |
 | Cursor        | `~/.cursor/skills/logika/`      |
 | OpenAI Codex  | `~/.codex/skills/logika/`       |
 | Kimi Code CLI | `~/.kimi/skills/logika/`        |
-| Coddy         | `~/.coddy/skills/logika/`       |
 
 The directory name must match the `name` field in `SKILL.md`.
 
