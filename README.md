@@ -89,6 +89,6 @@ The repository uses the standard plugin layout `skills/logika/SKILL.md`. Codex's
 
 Part of **[rpa-skills](https://github.com/EvilFreelancer/rpa-skills)** — [Pavel Rykov](https://t.me/evilfreelancer)'s agent-skills collection (see [notes on vibe coding](https://t.me/evilfreelancer/1485) and the prompt collection [cursor-vibe-prompts](https://github.com/EvilFreelancer/cursor-vibe-prompts)).
 
-Reference material is distilled from **G. Chelpanov's** classical formal-logic textbook «Учебник логики» (public domain). The full text of the textbook is not included in this repository.
+Reference material is distilled from **G. Chelpanov's** classical formal-logic textbook «Учебник логики» (public domain). The full text of the primary source is included in the repository but is not installed as part of the skill.
 
 Licensed under the MIT License — see [LICENSE](LICENSE).
