@@ -18,14 +18,14 @@ logika/
 ├─ .cursor-plugin/
 │  └─ plugin.json        # Cursor plugin manifest
 ├─ .codex-plugin/
-│  └─ plugin.json        # Codex plugin manifest (interface block + skills: "./")
-├─ SKILL.md              # CANONICAL skill: YAML frontmatter + instructions (repo root)
-├─ references/           # bundled assets (Russian, terminology per Chelpanov)
+│  └─ plugin.json        # Codex plugin manifest (interface block + skills: "./skills/")
+├─ skills/
+│  └─ logika/
+│     ├─ SKILL.md        # CANONICAL skill: YAML frontmatter + instructions
+│     ├─ references/     # bundled assets (Russian, terminology per Chelpanov)
+│     └─ docs/           # skill documentation
 ├─ commands/
 │  └─ review.md          # /logika:review plugin command (analysis-only mode)
-├─ docs/
-│  └─ konspekt.md        # per-chapter конспект of the source textbook
-├─ source/               # full text of Chelpanov's «Учебник логики» + assets
 ├─ README.md             # human overview
 ├─ AGENTS.md             # this file
 └─ LICENSE
@@ -37,11 +37,12 @@ The same facts (the skill text, its `version`, its `description`) are duplicated
 skill works across platforms. **Whenever you edit one, propagate the change to every place it is mirrored —
 in the same commit.** Nothing here is allowed to drift.
 
-### 1. `SKILL.md` lives at the repo root — single canonical copy
+### 1. `skills/logika/SKILL.md` is the single canonical copy
 
-- `SKILL.md` (repo root) — **canonical**. The repo itself is the skill folder: copy or symlink the whole
-  repository into `~/.claude/skills/logika/`, `~/.cursor/skills/logika/`, etc.
-- Bundled assets (`references/`, `docs/`, `source/`) live next to it and are referenced by relative path.
+- `skills/logika/SKILL.md` — **canonical**. The skill folder is `skills/logika/`; copy that directory
+  into a tool's skills root (for example, `~/.claude/skills/logika/` or `~/.cursor/skills/logika/`).
+- Bundled assets (`skills/logika/references/` and `skills/logika/docs/`) live next to it and are
+  referenced by paths relative to `SKILL.md`.
 - The skill text and its `references/` are **in Russian** (terminology per Chelpanov); keep new material
   in Russian too.
 
@@ -49,7 +50,7 @@ in the same commit.** Nothing here is allowed to drift.
 
 When you bump the version, update it in **all** of these:
 
-- `SKILL.md` frontmatter (repo root).
+- `skills/logika/SKILL.md` frontmatter.
 - `.claude-plugin/plugin.json`
 - `.cursor-plugin/plugin.json`
 - `.codex-plugin/plugin.json`
@@ -122,8 +123,8 @@ before committing.
 
 ## Commit checklist
 
-- [ ] `SKILL.md` edited where needed (Russian, terminology per Chelpanov).
-- [ ] `version` bumped and identical in `SKILL.md`, `.claude-plugin/plugin.json`,
+- [ ] `skills/logika/SKILL.md` edited where needed (Russian, terminology per Chelpanov).
+- [ ] `version` bumped and identical in `skills/logika/SKILL.md`, `.claude-plugin/plugin.json`,
       `.cursor-plugin/plugin.json`, `.codex-plugin/plugin.json`.
 - [ ] `description` consistent across all manifests (and `interface.shortDescription` in Codex).
 - [ ] README updated.
