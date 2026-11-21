@@ -70,10 +70,12 @@ coddy skills sync
 | Coddy         | `~/.coddy/skills/logika/`       |
 | Claude Code   | `~/.claude/skills/logika/`      |
 | Cursor        | `~/.cursor/skills/logika/`      |
-| OpenAI Codex  | `~/.codex/skills/logika/`       |
+| OpenAI Codex  | `~/.agents/skills/logika/`      |
 | Kimi Code CLI | `~/.kimi/skills/logika/`        |
 
 For a manual installation, copy `skills/logika/` itself, not the repository root. The skill directory name must match the `name` field in `skills/logika/SKILL.md`.
+
+Current Codex documentation uses `~/.agents/skills/` for user skills and `.agents/skills/` for repository skills. Install from GitHub with `$skill-installer`, or copy the complete `skills/logika/` directory into the chosen skills root. Some existing Codex setups use `~/.codex/skills/`; if that is the skills root your installation scans, use it instead. See [Codex skill installation and discovery](https://learn.chatgpt.com/docs/build-skills?product=breeze).
 
 The repository uses the standard plugin layout `skills/logika/SKILL.md`. Codex's plugin guide places each skill in its own directory under `skills/` and points the manifest at that directory. Claude Code also scans `skills/` by default; it additionally permits a root-level `SKILL.md` for a one-skill plugin. That exception is valid, but the `skills/` layout keeps Logika's references inside the skill folder and works across the plugin formats used here. See the [Codex skill layout](https://developers.openai.com/plugins/build/skills), [Codex manifest field](https://developers.openai.com/plugins/deploy/submission), and [Claude Code plugin layout](https://code.claude.com/docs/en/plugins-reference#standard-layout).
 
