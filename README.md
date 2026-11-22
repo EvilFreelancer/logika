@@ -1,6 +1,6 @@
 # Logika (formal logic)
 
-**Purpose**: Provides the agent with a classical formal-logic framework based on G. Chelpanov's textbook («Учебник логики»). It enables the model to review and fix the logic of Russian texts, perform rigorous logical analysis, construct and evaluate syllogisms, detect logical fallacies, and apply inductive reasoning methods. All reference material is in Russian, distilled from the source book (bundled in `source/`).
+**Purpose**: Provides the agent with a classical formal-logic framework based on G. Chelpanov's textbook («Учебник логики»). It enables the model to review and fix the logic of Russian texts, perform rigorous logical analysis, construct and evaluate syllogisms, detect logical fallacies, and apply inductive reasoning methods. The Russian reference notes are distilled from the book; an OCR transcript of the complete 1917 edition is bundled in [`source/`](source/).
 
 ## Modes
 
@@ -38,8 +38,9 @@
 
 **Docs**
 
-- `docs/konspekt.md` — постатейный конспект всех 26 глав учебника Челпанова: суть, ключевые понятия, приёмы с современными примерами, чек-листы.
-- `source/README.md` — полный текст учебника.
+- `docs/konspekt.md` — вторичный конспект 26 глав; он не заменяет полный текст издания 1917 года.
+- [`source/README.md`](source/README.md) — описание издания, происхождения OCR-текста и пагинации.
+- [`source/uchebnik-logiki-chelpanov-1917-9e-ocr.txt`](source/uchebnik-logiki-chelpanov-1917-9e-ocr.txt) — единый OCR-текст 9-го издания 1917 года, все 28 глав.
 
 **Why it matters**
 
@@ -86,6 +87,6 @@ The directory name must match the `name` field in `SKILL.md`.
 
 Part of **[rpa-skills](https://github.com/EvilFreelancer/rpa-skills)** — [Pavel Rykov](https://t.me/evilfreelancer)'s agent-skills collection (see [notes on vibe coding](https://t.me/evilfreelancer/1485) and the prompt collection [cursor-vibe-prompts](https://github.com/EvilFreelancer/cursor-vibe-prompts)).
 
-Reference material is distilled from **G. Chelpanov's** classical formal-logic textbook «Учебник логики» (public domain); the full text is bundled in `source/`.
+Reference material is distilled from **G. Chelpanov's** classical formal-logic textbook «Учебник логики». The bundled source is an OCR transcript of the 9th edition (1917); its provenance, Russian public-domain basis, and OCR limitations are documented in [`source/README.md`](source/README.md). The repository's MIT license applies to the skill materials, not to the underlying historical text.
 
 Licensed under the MIT License — see [LICENSE](LICENSE).
