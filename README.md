@@ -1,6 +1,6 @@
 # Logika (formal logic)
 
-**Purpose**: Provides the agent with a classical formal-logic framework based on G. Chelpanov's textbook («Учебник логики»). It enables the model to review and fix the logic of Russian texts, perform rigorous logical analysis, construct and evaluate syllogisms, detect logical fallacies, and apply inductive reasoning methods. All reference material is in Russian, distilled from the source book (bundled in `source/`).
+**Purpose**: Provides the agent with a classical formal-logic framework based on G. Chelpanov's textbook («Учебник логики»). It enables the model to review and fix the logic of Russian texts, perform rigorous logical analysis, construct and evaluate syllogisms, detect logical fallacies, and apply inductive reasoning methods. The Russian reference notes are distilled from the book; an OCR transcript of the complete 1917 edition is bundled in [`source/`](source/).
 
 ## Modes
 
@@ -38,8 +38,9 @@
 
 **Docs**
 
-- `docs/konspekt.md` — постатейный конспект всех 26 глав учебника Челпанова: суть, ключевые понятия, приёмы с современными примерами, чек-листы.
-- `source/README.md` — полный текст учебника.
+- `docs/konspekt.md` — вторичный конспект 26 глав; он не заменяет полный текст издания 1917 года.
+- [`source/README.md`](source/README.md) — описание издания, происхождения OCR-текста и пагинации.
+- [`source/uchebnik-logiki-chelpanov-1917-9e-ocr.txt`](source/uchebnik-logiki-chelpanov-1917-9e-ocr.txt) — единый OCR-текст 9-го издания 1917 года, все 28 глав.
 
 **Why it matters**
 
@@ -47,22 +48,16 @@ Embedding a structured logical reasoning skill allows the agent to go beyond heu
 
 ## Install
 
-This skill is distributed through the **rpa-skills** catalog (a Claude Code plugin marketplace), and also installs as a plain **skill folder** (Cursor, OpenAI Codex, Kimi Code CLI, and others).
+This fork is distributed through the **[iqdoctor/rpa-skills](https://github.com/iqdoctor/rpa-skills)** catalog and also installs as a plain **skill folder** (Cursor, OpenAI Codex, Kimi Code CLI, and others).
 
 **As a plugin (Claude Code)** — add the catalog once, then install this skill from it:
 
 ```text
-/plugin marketplace add EvilFreelancer/rpa-skills
+/plugin marketplace add iqdoctor/rpa-skills
 /plugin install logika@rpa-skills
 ```
 
-**In Coddy**: the rpa-skills catalog is built into [Coddy](https://coddy.dev) as a system source,
-so there is nothing to connect. One sync installs this skill together with the rest of the collection
-into `~/.coddy/skills/logika/` and keeps it up to date (or press **Sync all** in Settings → Skills):
-
-```bash
-coddy skills sync
-```
+**In Coddy**: its built-in catalog follows the upstream collection and does not include this fork's changes. To use this fork, install it as a plain skill folder in `~/.coddy/skills/logika/`.
 
 **As a plain skill folder** — copy or symlink this repository into a skill root (its `SKILL.md` lives at the repo root):
 
@@ -84,8 +79,8 @@ The directory name must match the `name` field in `SKILL.md`.
 
 ## Source & attribution
 
-Part of **[rpa-skills](https://github.com/EvilFreelancer/rpa-skills)** — [Pavel Rykov](https://t.me/evilfreelancer)'s agent-skills collection (see [notes on vibe coding](https://t.me/evilfreelancer/1485) and the prompt collection [cursor-vibe-prompts](https://github.com/EvilFreelancer/cursor-vibe-prompts)).
+Originally published as part of **[EvilFreelancer/rpa-skills](https://github.com/EvilFreelancer/rpa-skills)** — [Pavel Rykov](https://t.me/evilfreelancer)'s agent-skills collection (see [notes on vibe coding](https://t.me/evilfreelancer/1485) and the prompt collection [cursor-vibe-prompts](https://github.com/EvilFreelancer/cursor-vibe-prompts)); this repository is now maintained as [iqdoctor/logika](https://github.com/iqdoctor/logika).
 
-Reference material is distilled from **G. Chelpanov's** classical formal-logic textbook «Учебник логики» (public domain); the full text is bundled in `source/`.
+This repository is a fork of [EvilFreelancer/logika](https://github.com/EvilFreelancer/logika), part of [Pavel Rykov's original rpa-skills collection](https://github.com/EvilFreelancer/rpa-skills). The bundled text is an OCR transcript of the 9th edition (1917); provenance, public-domain basis in Russia, and OCR limitations are documented in [`source/README.md`](source/README.md). The repository's MIT license applies to the skill materials, not to the underlying historical text.
 
 Licensed under the MIT License — see [LICENSE](LICENSE).
