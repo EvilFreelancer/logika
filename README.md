@@ -19,6 +19,7 @@
 - Building or reducing syllogisms, proving statements, or identifying logical errors.
 - Applying the laws of thought (identity, non-contradiction, excluded middle, sufficient reason).
 - Performing inductive reasoning using Mill's methods, analogies, or hypothesis evaluation.
+- Checking whether cause-effect claims are actually justified (rule of the third element; Goldratt-style «чтобы X, нужно Y, потому что Z»).
 
 **Core workflow**
 
@@ -32,6 +33,7 @@
 - `references/concepts.md` — понятия: классификация, определение, деление.
 - `references/judgments.md` — суждения: A/E/I/O, логический квадрат, распределённость, непосредственные умозаключения.
 - `references/syllogism.md` — силлогизм: фигуры и модусы, сведение, условные/разделительные, энтимемы и сориты.
+- `references/causal.md` — обоснование причинно-следственных связей: шаблон «чтобы X, нужно Y, потому что Z», тавтология в обосновании, правило третьего элемента.
 - `references/induction.md` — индукция: методы Милля, гипотеза, аналогия, классификация.
 - `references/errors.md` — каталог логических ошибок, софизмы и паралогизмы.
 - `references/laws.md` — четыре закона мышления.
